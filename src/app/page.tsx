@@ -1,12 +1,18 @@
 import React from 'react';
 import './globals.css';
+import Header from '@/components/Header';
 
-export default function Home() {
+const HomePage = () => {
+
   return (
 
-    <div>
-      <h1 className='text-5xl'>Hello, world!</h1>
+    <div className="min-h-screen w-full bg-var(--dark-blue)">
+
+      <Header />
+      
     </div>
 
   );
-}
+};
+export default HomePage;
+

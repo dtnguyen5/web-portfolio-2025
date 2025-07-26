@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+:root{
+  --dark-blue: #060D1F;
+  --bila: #FFFFFF;
+  --poppins: font-family('Poppins', sans-serif);
+  --inter: font-family('Inter', sans-serif);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
