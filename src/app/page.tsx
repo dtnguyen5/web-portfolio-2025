@@ -6,7 +6,7 @@ const HomePage = () => {
 
   return (
 
-    <div className="min-h-screen w-full bg-var(--dark-blue)">
+    <div className="min-h-screen w-full bg-[var(--dark-blue)]">
 
       <Header />
       

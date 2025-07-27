@@ -1,7 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter:wght@400;700&display=swap');
 @import "tailwindcss";
 
 :root{
   --dark-blue: #060D1F;
+  --light-blue: #00B3FA;
   --bila: #FFFFFF;
   --poppins: font-family('Poppins', sans-serif);
   --inter: font-family('Inter', sans-serif);
@@ -11,4 +14,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Header.tsx */
+.Tittle-1, Tittle-2{
+  font-family: var(--poppins);
+}
+
+/* Navbar.tsx */
+.Button-navigation, .Mobile-navigation{
+  font-family: var(--poppins);
 }
