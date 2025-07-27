@@ -25,3 +25,14 @@
 .Button-navigation, .Mobile-navigation{
   font-family: var(--poppins);
 }
+
+/* Hompage */
+.text2{
+  font-family: var(--inter);
+}
+
+.buttons-bold{
+  font-weight: bold;
+  cursor: pointer;
+}
+

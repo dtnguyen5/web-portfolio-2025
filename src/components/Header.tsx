@@ -1,46 +1,70 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faLinkedinIn, faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons';
-import Navbar from './Navbar';
-
-
+import type React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faInstagram, faLinkedinIn, faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons"
+import Navbar from "./Navbar"
 
 const Header: React.FC = () => {
   return (
 
-    <header className="bg-[var(--bila)] h-25 w-full rounded-b-lg relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          {/* Title */}
-          <div>
-            <span className=" Tittle-1 text-[var(--dark-blue)] font-bold">Nguyen </span>
-            <span className=" Tittle-2 text-[var(--light-blue)] font-bold">Duy Tiep</span>
+    <header className="bg-[var(--bila)] flex items-center justify-center w-full relative z-50 shadow-sm rounded-b-lg">
+      <div className="w-[90%] px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-around items-center h-20 w-full">
+          {/* Logo vlevo */}
+          <div className="font-poppins font-semibold text-xl flex-shrink-0 min-w-fit">
+            <span className="text-[var(--dark-blue)] font-bold text-2xl cursor-pointer">Nguyen </span>
+            <span className="text-[var(--light-blue)] font-bold text-2xl cursor-pointer">Duy Tiep</span>
           </div>
 
-          {/* Desktop navigation */}
-          <Navbar />
+          {/* Navigace uprostřed - pouze na desktop */}
+          <div className="hidden md:flex flex-1 justify-center max-w-2xl mx-8">
+            <Navbar />
+          </div>
 
-          {/* Desktop Social Icons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <a href="#" className="text-[var(--dark-blue)] hover:text-[var(--light-blue)] transition-colors">
-              <FontAwesomeIcon icon={faInstagram} className="w-5 h-5" />
+          {/* Ikony vpravo - pouze na desktop */}
+          <div className="hidden md:flex items-center space-x-6 flex-shrink-0 min-w-fit gap-6">
+            <a
+              href="https://www.instagram.com/dtnguyen5_/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--dark-blue)] hover:text-[var(--light-blue)] transition-colors duration-200"
+            >
+              <FontAwesomeIcon icon={faInstagram} className="w-7 h-7" />
             </a>
-            <a href="#" className="text-[var(--dark-blue)] hover:text-[var(--light-blue)] transition-colors">
-              <FontAwesomeIcon icon={faLinkedinIn} className="w-5 h-5" />
+            <a
+              href="https://www.linkedin.com/in/duy-tiep-nguyen-7325002a3/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--dark-blue)] hover:text-[var(--light-blue)] transition-colors duration-200"
+            >
+              <FontAwesomeIcon icon={faLinkedinIn} className="w-7 h-7" />
             </a>
-            <a href="#" className="text-[var(--dark-blue)] hover:text-[var(--light-blue)] transition-colors">
-              <FontAwesomeIcon icon={faFacebook} className="w-5 h-5" />
+            <a
+              href="https://www.facebook.com/honza.nguyen.10297/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--dark-blue)] hover:text-[var(--light-blue)] transition-colors duration-200"
+            >
+              <FontAwesomeIcon icon={faFacebook} className="w-7 h-7" />
             </a>
-            <a href="#" className="text-[var(--dark-blue)]e hover:text-[var(--light-blue)] transition-colors">
-              <FontAwesomeIcon icon={faGithub} className="w-5 h-5" />
+            <a
+              href="https://github.com/dtnguyen5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--dark-blue)] hover:text-[var(--light-blue)] transition-colors duration-200"
+            >
+              <FontAwesomeIcon icon={faGithub} className="w-7 h-7" />
             </a>
           </div>
 
+          {/* Mobile menu button - pouze na mobile */}
+          <div className="md:hidden">
+            <Navbar />
+          </div>
         </div>
       </div>
     </header>
+    
+  )
+}
 
-  );
-};
-
-export default Header;
+export default Header
