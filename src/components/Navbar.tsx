@@ -2,22 +2,29 @@
 import { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInstagram, faLinkedinIn, faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons"
+import Link from "next/link"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const navItems = ["Domů", "O mně", "Projekty", "Kontakt"]
+  const navLinks: { label: string; href: string }[] = [
+    { label: "Domů", href: "/" },
+    { label: "O mně", href: "/about" },
+    { label: "Projekty", href: "/projects" },
+    { label: "Kontakty", href: "/contacts" },
+  ];
 
   return (
     <>
       {/* Desktop Navigation - centered, bold, spacing */}
       <nav className="hidden md:flex items-center justify-center gap-15 w-xl space-x-8 lg:space-x-12 font-bold text-base font-poppins">
-        {navItems.map((item) => (
-          <button
-            key={item}
+        {navLinks.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
             className="text-[var(--dark-blue)] text-2xl hover:text-[var(--light-blue)] transition-colors duration-200 whitespace-nowrap cursor-pointer"
           >
-            {item}
-          </button>
+            {link.label}
+          </Link>
         ))}
       </nav>
 
@@ -42,14 +49,15 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="absolute top-full left-0 right-0 md:hidden bg-[var(--bila)] shadow-lg border-t border-gray-200 z-50">
           <nav className="flex flex-col py-4">
-            {navItems.map((item) => (
-              <button
-                key={item}
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
                 className="text-[var(--dark-blue)] hover:text-[var(--light-blue)] px-6 py-3 text-left font-medium text-base font-poppins transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {item}
-              </button>
+                {link.label}
+              </Link>
             ))}
 
             {/* Mobile Social Icons */}
