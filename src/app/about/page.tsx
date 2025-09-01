@@ -24,28 +24,58 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="min-h-screen w-full bg-[var(--dark-blue)]">
+    
+    <div className="min-h-[180vh] w-full bg-[var(--dark-blue)]">
       <Header />
+      {/* Section 1 */}
       <div className="w-full h-[80vh] flex justify-center items-center">
-        <div className="w-[95%] h-[60vh] flex justify-around items-center">
+        <div className="w-[95%] h-[60vh] flex items-center justify-around">
 
-          {/* Profile */}
-          <div className="h-75 w-80 bg-[var(--bila)] rounded-[30px] border-6 border-[var(--light-blue)]"></div>
+          {/* Profile + Info vedle sebe */}
+          <div className="flex items-center gap-24">
+            {/* Profile */}
+            <div className="flex-shrink-0 flex flex-col items-center justify-center">
+              <div className="w-[340px] h-[340px] bg-[var(--bila)] rounded-[40px] border-4 border-[var(--light-blue)]"></div>
+            </div>
 
-          {/* Information */}
-          <div className="ml-12 flex flex-col gap-8">
-            {infoData.map((item, idx) => (
-              <div key={idx} className="flex items-center gap-2">
-                <FontAwesomeIcon icon={item.icon} className="text-[var(--light-blue)] text-xs" />
-                <span className="text-[var(--bila)] text-sm font-poppins">{item.text}</span>
+            {/* Info */}
+            <div className="flex flex-col gap-10 min-w-[260px]">
+              {infoData.map((item, idx) => (
+                <div key={idx} className="flex items-center gap-6">
+                  <FontAwesomeIcon icon={item.icon} className="text-[var(--light-blue)]" style={{ width: '38px', height: '38px' }} />
+                  <span className="text-[var(--bila)] text-[1.4rem] font-poppins whitespace-nowrap">{item.text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* About text */}
+          <div className="pl-20 flex flex-col justify-center w-[32vw] gap-7">
+            <h2 className="text-[var(--light-blue)] text-4xl font-bold mb-8 font-poppins text-center">O mně</h2>
+            <div className="max-w-md flex-col">
+              <div className="flex flex-col gap-6">
+                <p className="text-[var(--bila)] text-[1.2rem] w-[32vw] font-poppins leading-normal text-justify break-words">
+                  Jsem webový vývojář z Plzně a specializuji se na tvorbu moderních, funkčních a snadno udržovatelných webových stránek. Weby vytvářím v Reactu, TypeScriptu, TailwindCSS a SCSS. Díky těmto technologiím tvořím rychlé, dynamické a škálovatelné projekty, které dobře vypadají a snadno se upravují podle potřeby klienta.
+                </p>
+                <p className="text-[var(--bila)] text-[1.2rem] w-[32vw] font-poppins leading-normal text-justify break-words">
+                  Zakládám si na přehlednosti, responzivitě a vizuální atraktivitě. Sleduji aktuální trendy a neustále rozvíjím své dovednosti, abych svým klientům poskytoval moderní a efektivní řešení.
+                </p>
               </div>
-            ))}
+            </div>
           </div>
 
         </div>
       </div>
+
+      {/* Section 2 */}
+      <div className="w-full h-[70vh] flex justify-center items-center">
+
+          
+
+      </div>
+
     </div>
-    
   )
 }
+
 export default AboutPage;

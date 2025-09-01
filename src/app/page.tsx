@@ -90,7 +90,7 @@ const HomePage = () => {
             </div>
 
             {/* Right Content - Profile Image */}
-            <div className="flex justify-center lg:justify-center lg:items-center h-full lg:pr-12 xl:pr-24">
+            <div className="flex justify-center lg:justify-center lg:items-center h-full lg:pr-12 xl:pr-24 ">
               <div className="w-[404px] h-[393px] rounded-full border-4 border-[var(--light-blue)] bg-white relative overflow-hidden"></div>
             </div>
           </div>
