@@ -1,4 +1,5 @@
 import Header from "@/components/Header"
+import Nabidky from "@/components/Nabidky"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser, faBirthdayCake, faMapMarkerAlt, faGraduationCap } from "@fortawesome/free-solid-svg-icons"
 
@@ -50,15 +51,15 @@ const AboutPage = () => {
           </div>
 
           {/* About text */}
-          <div className="pl-20 flex flex-col justify-center w-[32vw] gap-7">
+          <div className="pl-20 flex flex-col justify-center w-[32vw] gap-6">
             <h2 className="text-[var(--light-blue)] text-4xl font-bold mb-8 font-poppins text-center">O mně</h2>
-            <div className="max-w-md flex-col">
+            <div className="rounded-[30px] p-8">
               <div className="flex flex-col gap-6">
-                <p className="text-[var(--bila)] text-[1.2rem] w-[32vw] font-poppins leading-normal text-justify break-words">
-                  Jsem webový vývojář z Plzně a specializuji se na tvorbu moderních, funkčních a snadno udržovatelných webových stránek. Weby vytvářím v Reactu, TypeScriptu, TailwindCSS a SCSS. Díky těmto technologiím tvořím rychlé, dynamické a škálovatelné projekty, které dobře vypadají a snadno se upravují podle potřeby klienta.
+                <p className="text-[var(--bila)] text-[1.2rem] font-poppins leading-normal text-justify break-words">
+                  Jsem webový vývojář z Plzně a specializuji se na tvorbu moderních, funkčních a snadno udržovatelných webových stránek. Weby vytvářím v Reactu, TypeScriptu, TailwindCSS a{'\u00A0'}SCSS. Díky těmto technologiím tvořím rychlé, dynamické a{'\u00A0'}škálovatelné projekty, které dobře vypadají a snadno se upravují podle potřeby klienta.
                 </p>
-                <p className="text-[var(--bila)] text-[1.2rem] w-[32vw] font-poppins leading-normal text-justify break-words">
-                  Zakládám si na přehlednosti, responzivitě a vizuální atraktivitě. Sleduji aktuální trendy a neustále rozvíjím své dovednosti, abych svým klientům poskytoval moderní a efektivní řešení.
+                <p className="text-[var(--bila)] text-[1.2rem] font-poppins leading-normal text-justify break-words">
+                  Zakládám si na přehlednosti, responzivitě a vizuální atraktivitě. Sleduji aktuální trendy a neustále rozvíjím své dovednosti, abych{'\u00A0'} svým klientům poskytoval moderní a efektivní řešení.
                 </p>
               </div>
             </div>
@@ -70,7 +71,18 @@ const AboutPage = () => {
       {/* Section 2 */}
       <div className="w-full h-[70vh] flex justify-center items-center">
 
-          
+        <div className="w-[82%] h-[70vh] flex flex-col gap-17">
+          {/* Nadpis */}
+          <div className="w-full flex flex-col gap-8">
+            <h2 className="text-[var(--light-blue)] text-4xl font-bold font-poppins">Co Vám mohu nabídnout ?</h2>
+            <div className="w-[125px] h-[7px] bg-[var(--light-blue)]"></div>
+          </div>
+          {/* Karty nabídek */}
+          <div>
+            <Nabidky />
+          </div>
+
+        </div>
 
       </div>
 

@@ -6,6 +6,8 @@
   --dark-blue: #060D1F;
   --light-blue: #00B3FA;
   --bila: #FFFFFF;
+  --dark-blue2: #102761;
+  --blue-low: rgba(7, 21, 56, 0.55);
   --poppins: font-family('Poppins', sans-serif);
   --inter: font-family('Inter', sans-serif);
 }
