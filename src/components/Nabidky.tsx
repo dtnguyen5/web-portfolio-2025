@@ -21,6 +21,7 @@ const Nabidky = () => {
   ];
 
   return (
+
     <div className="flex flex-col md:flex-row gap-20 justify-center items-center">
       {cards.map((card, index) => (
         <div
@@ -38,6 +39,7 @@ const Nabidky = () => {
         </div>
       ))}
     </div>
+    
   );
 };
 
