@@ -71,11 +71,13 @@ const AboutPage = () => {
       {/* Section 2 */}
       <div className="w-full h-[70vh] flex justify-center items-center">
         <div className="w-[82%] h-[70vh] flex flex-col gap-17">
+
           {/* Nadpis */}
           <div className="w-full flex flex-col gap-7">
             <h2 className="text-[var(--light-blue)] text-4xl font-bold font-poppins">Co Vám mohu nabídnout ?</h2>
             <div className="w-[125px] h-[7px] bg-[var(--light-blue)] rounded-r-lg"></div>
           </div>
+
           {/* Karty nabídek */}
           <div>
             <Nabidky />
