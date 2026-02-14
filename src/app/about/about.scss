@@ -1,0 +1,40 @@
+@use "../globals.scss" as *;
+
+.about-root {
+	background-color: $dark-blue;
+}
+
+.about-profile-box {
+	background-color: $bila;
+	border-color: $light-blue;
+}
+
+.about-info-icon {
+	color: $light-blue;
+}
+
+.about-info-text {
+	color: $bila;
+}
+
+.about-section-title {
+	color: $light-blue;
+}
+
+.about-body-text {
+	color: $bila;
+	text-align: justify;
+	text-justify: inter-word;
+	hyphens: none;
+	overflow-wrap: normal;
+}
+
+@media (max-width: 1024px) {
+	.about-body-text {
+		text-align: left;
+	}
+}
+
+.about-section-underline {
+	background-color: $light-blue;
+}

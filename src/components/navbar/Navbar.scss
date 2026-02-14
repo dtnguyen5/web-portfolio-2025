@@ -1,0 +1,49 @@
+@use "../../app/globals.scss" as *;
+
+.navbar-link {
+	color: $dark-blue;
+
+	&:hover {
+		color: $light-blue;
+	}
+}
+
+.navbar-menu-button {
+	color: $dark-blue;
+}
+
+.navbar-mobile-menu {
+	background-color: $bila;
+}
+
+.navbar-mobile-link {
+	color: $dark-blue;
+
+	&:hover {
+		color: $light-blue;
+	}
+}
+
+.navbar-mobile-label {
+	color: $dark-blue;
+}
+
+.navbar-social-link {
+	color: $dark-blue;
+
+	&:hover {
+		color: $light-blue;
+	}
+}
+
+.Button {
+	&-navigation {
+		font-family: $poppins;
+	}
+}
+
+.Mobile {
+	&-navigation {
+		font-family: $poppins;
+	}
+}

@@ -1,0 +1,23 @@
+@use "../../app/globals.scss" as *;
+
+.nabidky-card {
+	background-color: $blue-low;
+	color: $light-blue;
+	box-shadow:
+		0 6px 10px rgba(0, 0, 0, 0.6),
+		6px 0 10px rgba(0, 0, 0, 0.4),
+		-6px 0 10px rgba(0, 0, 0, 0.4),
+		0 -6px 0 $light-blue;
+}
+
+.nabidky-icon-wrap {
+	color: $light-blue;
+	background-color: $dark-blue2;
+	box-shadow:
+		0 0 4px 2px $light-blue,
+		0 0 8px 2px $light-blue;
+}
+
+.nabidky-card-text {
+	color: $bila;
+}

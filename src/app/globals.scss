@@ -1,0 +1,21 @@
+$dark-blue: #060d1f;
+$light-blue: #00b3fa;
+$bila: #ffffff;
+$dark-blue2: #102761;
+$blue-low: rgba(7, 21, 56, 0.55);
+$poppins: "Poppins", sans-serif;
+$inter: "Inter", sans-serif;
+
+@mixin hover-colors($bg, $text, $hover-bg, $hover-text: null) {
+	background-color: $bg;
+	color: $text;
+
+	&:hover {
+		background-color: $hover-bg;
+
+		@if $hover-text != null {
+			color: $hover-text;
+		}
+	}
+}
+

@@ -1,0 +1,28 @@
+@use "../../app/globals.scss" as *;
+
+.header-root {
+	background-color: $bila;
+}
+
+.header-logo-primary {
+	color: $dark-blue;
+}
+
+.header-logo-secondary {
+	color: $light-blue;
+}
+
+.header-social-link {
+	color: $dark-blue;
+
+	&:hover {
+		color: $light-blue;
+	}
+}
+
+.Tittle {
+	&-1,
+	&-2 {
+		font-family: $poppins;
+	}
+}

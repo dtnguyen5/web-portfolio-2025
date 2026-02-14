@@ -1,20 +1,26 @@
-import Header from "@/components/Header"
+import Header from "@/components/header/Header"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faInstagram, faLinkedinIn, faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons"
+import ICONS from "@/constants/icons"
+import "./page.scss"
 
-const HomePage = () => {
-  return (
-    <div className="min-h-screen w-full bg-[var(--dark-blue)]">
+const SOCIAL_LINKS = [
+  { href: "#", icon: ICONS.instagram, label: "Instagram" },
+  { href: "#", icon: ICONS.linkedin, label: "LinkedIn" },
+  { href: "#", icon: ICONS.facebook, label: "Facebook" },
+  { href: "#", icon: ICONS.github, label: "GitHub" },
+]
+
+const HomePage = () => (
+    <div className="min-h-screen w-full home-root">
       <Header />
       <section
-        className="bg-[var(--dark-blue)] flex items-center justify-center py-8 md:py-16"
+        className="home-section flex items-center justify-center py-8 md:py-16"
         style={{ minHeight: "calc(100vh - 120px)" }}
       >
         <div className="w-full px-8 lg:px-16 xl:px-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-2 items-center h-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-center h-full">
             {/* Left Content */}
             <div className="text-white flex flex-col justify-center text-left justify-self-center w-[66%] max-w-2xl pl-4 sm:pl-6 md:pl-8">
-              
               {/* Nadpis */}
               <h1 className="font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold leading-tight">
                 <span className="block">
@@ -27,9 +33,9 @@ const HomePage = () => {
 
               {/* Profese */}
               <h2 className="font-inter text-base sm:text-lg md:text-3xl lg:text-3xl xl:text-3xl">
-                <span className="text2 text-[var(--light-blue)] font-bold">Front-end developer</span>
+                <span className="text2 home-accent font-bold">Front-end developer</span>
                 <span className="text2 text-white font-bold"> & </span>
-                <span className="text2 text-[var(--light-blue)] font-bold">UI/UX designer</span>
+                <span className="text2 home-accent font-bold">UI/UX designer</span>
               </h2>
 
               <div className="h-5" />
@@ -48,41 +54,27 @@ const HomePage = () => {
                     Sledujte mě na:
                   </span>
 
-                  <div className="flex items-center space-x-4 ml-6 gap-4">
-                    <a
-                      href="#"
-                      className="bg-white h-10 w-10 flex justify-center items-center text-[var(--dark-blue)] p-5 rounded-full hover:bg-[var(--light-blue)] hover:text-white transition-all duration-300"
-                    >
-                      <FontAwesomeIcon icon={faInstagram} className="w-5 h-7" />
-                    </a>
-                    <a
-                      href="#"
-                      className="bg-white h-10 w-10 flex justify-center items-center text-[var(--dark-blue)] p-5 rounded-full hover:bg-[var(--light-blue)] hover:text-white transition-all duration-300"
-                    >
-                      <FontAwesomeIcon icon={faLinkedinIn} className="w-5 h-7" />
-                    </a>
-                    <a
-                      href="#"
-                      className="bg-white h-10 w-10 flex justify-center items-center text-[var(--dark-blue)] p-5 rounded-full hover:bg-[var(--light-blue)] hover:text-white transition-all duration-300"
-                    >
-                      <FontAwesomeIcon icon={faFacebook} className="w-5 h-7" />
-                    </a>
-                    <a
-                      href="#"
-                      className="bg-white h-10 w-10 flex justify-center items-center text-[var(--dark-blue)] p-5 rounded-full hover:bg-[var(--light-blue)] hover:text-white transition-all duration-300"
-                    >
-                      <FontAwesomeIcon icon={faGithub} className="w-5 h-7" />
-                    </a>
+                  <div className="flex items-center gap-4 ml-6">
+                    {SOCIAL_LINKS.map((link) => (
+                      <a
+                        key={link.label}
+                        href={link.href}
+                        className="home-social-button h-10 w-10 flex justify-center items-center p-5 rounded-full transition-all duration-300"
+                        aria-label={link.label}
+                      >
+                        <FontAwesomeIcon icon={link.icon} className="w-5 h-7" />
+                      </a>
+                    ))}
                   </div>
                 </div>
 
                 <div className="h-8" />
 
-                <div className="flex space-x-6 gap-5">
-                  <button className="buttons-bold font-inter bg-[var(--light-blue)] text-white w-[175px] h-[53px] rounded-full hover:bg-white hover:text-[var(--light-blue)] transition-all duration-300 font-medium text-base lg:text-lg flex items-center justify-center">
+                <div className="flex gap-5">
+                  <button className="buttons-bold font-inter home-primary-button w-[175px] h-[53px] rounded-full transition-all duration-300 font-medium text-base lg:text-lg flex items-center justify-center">
                     Prozkoumat
                   </button>
-                  <button className="buttons-bold font-inter border-2 border-[var(--light-blue)] text-[var(--light-blue)] w-[175px] h-[53px] rounded-full hover:bg-[var(--light-blue)] hover:text-white transition-all duration-300 font-medium text-base lg:text-lg flex items-center justify-center">
+                  <button className="buttons-bold font-inter border-2 home-secondary-button w-[175px] h-[53px] rounded-full transition-all duration-300 font-medium text-base lg:text-lg flex items-center justify-center">
                     Zkontaktovat
                   </button>
                 </div>
@@ -90,14 +82,13 @@ const HomePage = () => {
             </div>
 
             {/* Right Content - Profile Image */}
-            <div className="flex justify-center lg:justify-center lg:items-center h-full lg:pr-12 xl:pr-24 ">
-              <div className="w-[404px] h-[393px] rounded-full border-4 border-[var(--light-blue)] bg-white relative overflow-hidden"></div>
+            <div className="flex justify-center lg:items-center h-full lg:pr-12 xl:pr-24">
+              <div className="w-[404px] h-[393px] rounded-full border-4 home-profile-ring relative overflow-hidden"></div>
             </div>
           </div>
         </div>
       </section>
     </div>
-  )
-}
+)
 
 export default HomePage

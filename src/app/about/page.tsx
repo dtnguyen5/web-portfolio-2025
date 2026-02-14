@@ -1,50 +1,35 @@
-import Header from "@/components/Header"
-import Nabidky from "@/components/Nabidky"
+import Header from "@/components/header/Header"
+import Nabidky from "@/components/nabidky/Nabidky"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faUser, faBirthdayCake, faMapMarkerAlt, faGraduationCap } from "@fortawesome/free-solid-svg-icons"
+import ICONS from "@/constants/icons"
+import "./about.scss"
 
-const AboutPage = () => {
+const INFO_ITEMS = [
+  { icon: ICONS.user, text: "Nguyen Duy Tiep" },
+  { icon: ICONS.birthdayCake, text: "18 let" },
+  { icon: ICONS.mapMarkerAlt, text: "Plzeň" },
+  { icon: ICONS.graduationCap, text: "SŠ INFIS" },
+]
 
-  const infoData = [
-    {
-      icon: faUser,
-      text: "Nguyen Duy Tiep",
-    },
-    {
-      icon: faBirthdayCake,
-      text: "18 let",
-    },
-    {
-      icon: faMapMarkerAlt,
-      text: "Plzeň",
-    },
-    {
-      icon: faGraduationCap,
-      text: "SŠ INFIS",
-    },
-  ];
-
-  return (
-    
-    <div className="min-h-[180vh] w-full bg-[var(--dark-blue)]">
+const AboutPage = () => (
+  <div className="min-h-[180vh] w-full about-root" lang="cs">
       <Header />
       {/* Section 1 */}
       <div className="w-full h-[80vh] flex justify-center items-center">
         <div className="w-[95%] h-[60vh] flex items-center justify-around">
-
           {/* Profile + Info vedle sebe */}
           <div className="flex items-center gap-24">
             {/* Profile */}
             <div className="flex-shrink-0 flex flex-col items-center justify-center">
-              <div className="w-[340px] h-[340px] bg-[var(--bila)] rounded-[40px] border-4 border-[var(--light-blue)]"></div>
+              <div className="w-[340px] h-[340px] about-profile-box rounded-[40px] border-4"></div>
             </div>
 
             {/* Info */}
             <div className="flex flex-col gap-10 min-w-[260px]">
-              {infoData.map((item, idx) => (
-                <div key={idx} className="flex items-center gap-6">
-                  <FontAwesomeIcon icon={item.icon} className="text-[var(--light-blue)]" style={{ width: '38px', height: '38px' }} />
-                  <span className="text-[var(--bila)] text-[1.4rem] font-poppins whitespace-nowrap">{item.text}</span>
+              {INFO_ITEMS.map((item) => (
+                <div key={item.text} className="flex items-center gap-6">
+                  <FontAwesomeIcon icon={item.icon} className="about-info-icon" style={{ width: "38px", height: "38px" }} />
+                  <span className="about-info-text text-[1.4rem] font-poppins whitespace-nowrap">{item.text}</span>
                 </div>
               ))}
             </div>
@@ -52,13 +37,13 @@ const AboutPage = () => {
 
           {/* About text */}
           <div className="pl-20 flex flex-col justify-center w-[32vw] gap-6">
-            <h2 className="text-[var(--light-blue)] text-4xl font-bold mb-8 font-poppins text-center">O mně</h2>
+            <h2 className="about-section-title text-4xl font-bold mb-8 font-poppins text-center">O mně</h2>
             <div className="rounded-[30px] p-8">
               <div className="flex flex-col gap-6">
-                <p className="text-[var(--bila)] text-[1.2rem] font-poppins leading-normal text-justify break-words">
+                <p className="about-body-text text-[1.2rem] font-poppins leading-normal break-words">
                   Jsem webový vývojář z Plzně a specializuji se na tvorbu moderních, funkčních a snadno udržovatelných webových stránek. Weby vytvářím v Reactu, TypeScriptu, TailwindCSS a{'\u00A0'}SCSS. Díky těmto technologiím tvořím rychlé, dynamické a{'\u00A0'}škálovatelné projekty, které dobře vypadají a snadno se upravují podle potřeby klienta.
                 </p>
-                <p className="text-[var(--bila)] text-[1.2rem] font-poppins leading-normal text-justify break-words">
+                <p className="about-body-text text-[1.2rem] font-poppins leading-normal break-words">
                   Zakládám si na přehlednosti, responzivitě a vizuální atraktivitě. Sleduji aktuální trendy a neustále rozvíjím své dovednosti, abych{'\u00A0'} svým klientům poskytoval moderní a efektivní řešení.
                 </p>
               </div>
@@ -73,8 +58,8 @@ const AboutPage = () => {
         <div className="w-[82%] h-[70vh] flex flex-col gap-17">
           {/* Nadpis */}
           <div className="w-full flex flex-col gap-7">
-            <h2 className="text-[var(--light-blue)] text-4xl font-bold font-poppins">Co Vám mohu nabídnout ?</h2>
-            <div className="w-[125px] h-[7px] bg-[var(--light-blue)] rounded-r-lg"></div>
+            <h2 className="about-section-title text-4xl font-bold font-poppins">Co Vám mohu nabídnout ?</h2>
+            <div className="w-[125px] h-[7px] about-section-underline rounded-r-lg"></div>
           </div>
           {/* Karty nabídek */}
           <div>
@@ -82,9 +67,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-    </div>
-    
-  )
-}
+  </div>
+)
 
-export default AboutPage;
+export default AboutPage

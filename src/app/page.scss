@@ -1,0 +1,46 @@
+@use "./globals.scss" as *;
+
+.text2 {
+  font-family: $inter;
+}
+
+.buttons {
+  &-bold {
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.home-root {
+  background-color: $dark-blue;
+}
+
+.home-section {
+  background-color: $dark-blue;
+}
+
+.home-accent {
+  color: $light-blue;
+}
+
+.home-social-button {
+  @include hover-colors($bila, $dark-blue, $light-blue, $bila);
+}
+
+.home-primary-button {
+  @include hover-colors($light-blue, $bila, $bila, $light-blue);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.home-secondary-button {
+  @include hover-colors(transparent, $light-blue, $light-blue, $bila);
+  border-color: $light-blue;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.home-profile-ring {
+  border-color: $light-blue;
+  background-color: $bila;
+}
