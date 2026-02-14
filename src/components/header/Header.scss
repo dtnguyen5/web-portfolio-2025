@@ -13,11 +13,7 @@
 }
 
 .header-social-link {
-	color: $dark-blue;
-
-	&:hover {
-		color: $light-blue;
-	}
+	@include simple-hover($dark-blue, $light-blue);
 }
 
 .Tittle {

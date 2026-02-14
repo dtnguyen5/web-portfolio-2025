@@ -27,10 +27,8 @@
 	text-justify: inter-word;
 	hyphens: none;
 	overflow-wrap: normal;
-}
 
-@media (max-width: 1024px) {
-	.about-body-text {
+	@include responsive(tablet) {
 		text-align: left;
 	}
 }

@@ -1,10 +1,15 @@
 @use "../../app/globals.scss" as *;
 
-.navbar-link {
-	color: $dark-blue;
+// Generování hover stylů pro všechny navbar linky
+$navbar-links: (
+	"navbar-link",
+	"navbar-mobile-link",
+	"navbar-social-link"
+);
 
-	&:hover {
-		color: $light-blue;
+@each $link in $navbar-links {
+	.#{$link} {
+		@include simple-hover($dark-blue, $light-blue);
 	}
 }
 
@@ -16,24 +21,8 @@
 	background-color: $bila;
 }
 
-.navbar-mobile-link {
-	color: $dark-blue;
-
-	&:hover {
-		color: $light-blue;
-	}
-}
-
 .navbar-mobile-label {
 	color: $dark-blue;
-}
-
-.navbar-social-link {
-	color: $dark-blue;
-
-	&:hover {
-		color: $light-blue;
-	}
 }
 
 .Button {

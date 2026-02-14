@@ -13,9 +13,7 @@
 .nabidky-icon-wrap {
 	color: $light-blue;
 	background-color: $dark-blue2;
-	box-shadow:
-		0 0 4px 2px $light-blue,
-		0 0 8px 2px $light-blue;
+	@include glow-effect($light-blue, 4px 2px, 8px 2px);
 }
 
 .nabidky-card-text {

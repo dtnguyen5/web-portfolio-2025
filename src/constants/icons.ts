@@ -3,6 +3,7 @@ import {
   faLinkedinIn,
   faFacebook,
   faGithub,
+  faReact,
 } from "@fortawesome/free-brands-svg-icons"
 import {
   faDesktop,
@@ -13,6 +14,7 @@ import {
   faMapMarkerAlt,
   faGraduationCap,
 } from "@fortawesome/free-solid-svg-icons"
+import { FiFramer } from "react-icons/fi"
 
 const ICONS = {
   // Social
@@ -31,6 +33,10 @@ const ICONS = {
   birthdayCake: faBirthdayCake,
   mapMarkerAlt: faMapMarkerAlt,
   graduationCap: faGraduationCap,
+
+  // Technologies
+  react: faReact,
+  framer: FiFramer,
 } as const
 
 export default ICONS

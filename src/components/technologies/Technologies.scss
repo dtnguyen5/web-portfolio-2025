@@ -1,0 +1,92 @@
+@use "../../app/globals.scss" as *;
+
+// Mapa barev pro ikony
+$icon-colors: (
+	"cyan": $react-blue,
+	"white": $bila,
+);
+
+// Mixin pro glow efekt
+@mixin glow-effect($color, $blur1, $blur2) {
+	box-shadow:
+		0 0 $blur1 $color,
+		0 0 $blur2 $color;
+}
+
+// Funkce pro převod hex na rgba
+@function hex-to-rgba($color, $alpha) {
+	@return rgba($color, $alpha);
+}
+
+.technologies-root {
+	background-color: $dark-blue;
+}
+
+.technologies-panel {
+	background-color: rgba(7, 21, 56, 0.7);
+	border-radius: 28px;
+	box-shadow:
+		0 10px 24px rgba(0, 0, 0, 0.5),
+		0 0 0 1px rgba(0, 179, 250, 0.08) inset;
+}
+
+.technologies-title {
+	color: $light-blue;
+	font-family: $poppins;
+}
+
+.technologies-underline {
+	width: 110px;
+	height: 4px;
+	background-color: $light-blue;
+	@include glow-effect(rgba(0, 179, 250, 0.6), 10px, 0);
+	border-radius: 999px;
+}
+
+.technologies-card {
+	background-color: $blue-low;
+	color: $bila;
+	box-shadow:
+		0 8px 18px rgba(0, 0, 0, 0.45),
+		0 0 0 1px rgba(0, 179, 250, 0.1) inset;
+	transition: all 0.3s ease;
+	cursor: pointer;
+
+	&:hover {
+		box-shadow:
+			0 8px 18px rgba(0, 0, 0, 0.45),
+			0 0 0 2px rgba(0, 179, 250, 0.8) inset,
+			0 0 20px rgba(0, 179, 250, 0.6);
+		transform: translateY(-4px);
+
+		.technologies-label {
+			color: $light-blue;
+		}
+	}
+}
+
+.technologies-icon {
+	background-color: $dark-blue2;
+	@include glow-effect(rgba(0, 179, 250, 0.7), 6px, 12px);
+}
+
+.technologies-icon-text {
+	color: $light-blue;
+	font-family: $poppins;
+	font-weight: 700;
+	font-size: 20px;
+	width: 29px;
+	height: 29px;
+
+	// Generování barevných variant pomocí @each
+	@each $name, $color in $icon-colors {
+		&.icon-#{$name} {
+			color: $color;
+		}
+	}
+}
+
+.technologies-label {
+	color: $bila;
+	font-family: $poppins;
+}

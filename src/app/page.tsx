@@ -41,8 +41,8 @@ const HomePage = () => (
             <div className="h-5" />
 
             {/* Popis */}
-            <p className="max-w-11/12 font-inter text-base sm:text-base md:text-lg lg:text-lg leading-relaxed text-white">
-              Zde najdete ukázky mých webových projektů. Tvořím moderní a funkční weby – podívejte se na mé práce a ozvěte se pro spolupráci!
+            <p className="w-full font-inter text-base sm:text-base md:text-lg lg:text-lg leading-relaxed text-white">
+              Zde najdete ukázky mých webových projektů. Tvořím moderní<br />a funkční weby – podívejte se na mé práce a ozvěte se pro spolupráci!
             </p>
 
             <div className="h-2" />

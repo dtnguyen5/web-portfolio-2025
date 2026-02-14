@@ -1,5 +1,12 @@
 @use "./globals.scss" as *;
 
+// Mapa variant tlačítek
+$button-variants: (
+	"social": ($bila, $dark-blue, $light-blue, $bila),
+	"primary": ($light-blue, $bila, $bila, $light-blue),
+	"secondary": (transparent, $light-blue, $light-blue, $bila)
+);
+
 .text2 {
   font-family: $inter;
 }
@@ -23,21 +30,17 @@
   color: $light-blue;
 }
 
-.home-social-button {
-  @include hover-colors($bila, $dark-blue, $light-blue, $bila);
-}
+// Generování variant tlačítek
+@each $variant, $colors in $button-variants {
+	.home-#{$variant}-button {
+		@include hover-colors(nth($colors, 1), nth($colors, 2), nth($colors, 3), nth($colors, 4));
+		font-weight: bold;
+		cursor: pointer;
 
-.home-primary-button {
-  @include hover-colors($light-blue, $bila, $bila, $light-blue);
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.home-secondary-button {
-  @include hover-colors(transparent, $light-blue, $light-blue, $bila);
-  border-color: $light-blue;
-  font-weight: bold;
-  cursor: pointer;
+		@if $variant == "secondary" {
+			border-color: $light-blue;
+		}
+	}
 }
 
 .home-profile-ring {

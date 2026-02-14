@@ -1,5 +1,6 @@
 import Header from "@/components/header/Header"
 import Nabidky from "@/components/nabidky/Nabidky"
+import Technologies from "@/components/technologies/Technologies"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import ICONS from "@/constants/icons"
 import "./about.scss"
@@ -12,7 +13,7 @@ const INFO_ITEMS = [
 ]
 
 const AboutPage = () => (
-  <div className="min-h-[180vh] w-full about-root" lang="cs">
+  <div className="min-h-[240vh] w-full about-root" lang="cs">
       <Header />
       {/* Section 1 */}
       <div className="w-full h-[80vh] flex justify-center items-center">
@@ -67,6 +68,13 @@ const AboutPage = () => (
           <div>
             <Nabidky />
           </div>
+        </div>
+      </div>
+
+      {/* Section 3 */}
+      <div className="w-full h-[70vh] flex justify-center items-center">
+        <div className="w-[90%]">
+          <Technologies />
         </div>
       </div>
   </div>
