@@ -1,4 +1,5 @@
 import Header from "@/components/header/Header"
+import Footer from "@/components/footer/Footer"
 import Nabidky from "@/components/nabidky/Nabidky"
 import Technologies from "@/components/technologies/Technologies"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -13,10 +14,13 @@ const INFO_ITEMS = [
 ]
 
 const AboutPage = () => (
-  <div className="min-h-[240vh] w-full about-root" lang="cs">
+  <div className="min-h-screen w-full flex flex-col about-root" lang="cs">
       <Header />
-      {/* Section 1 */}
-      <div className="w-full h-[80vh] flex justify-center items-center">
+      
+      {/* Main content */}
+      <div className="flex-1">
+        {/* Section 1 */}
+        <div className="w-full h-[80vh] flex justify-center items-center">
         <div className="w-[95%] h-[60vh] flex items-center justify-around">
           {/* Profile + Info vedle sebe */}
           <div className="flex items-center gap-24">
@@ -72,11 +76,15 @@ const AboutPage = () => (
       </div>
 
       {/* Section 3 */}
-      <div className="w-full h-[70vh] flex justify-center items-center">
+      <div className="w-full flex justify-center items-center py-20 mb-60">
         <div className="w-[90%]">
           <Technologies />
         </div>
       </div>
+  </div>
+
+      {/* Footer */}
+      <Footer />
   </div>
 )
 

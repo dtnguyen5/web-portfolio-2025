@@ -1,0 +1,149 @@
+@use "../../app/globals.scss" as *;
+
+.footer-root {
+	background-color: $bila;
+	border-top: 3px solid $light-blue;
+	padding: 3rem 0 1.5rem;
+}
+
+.footer-container {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.footer-content {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1.2fr 1.5fr;
+	gap: 3rem;
+	margin-bottom: 2rem;
+}
+
+.footer-column {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+}
+
+// Logo
+.footer-logo {
+	font-family: $poppins;
+	font-size: 1.75rem;
+	font-weight: 700;
+	margin: 0;
+}
+
+.footer-logo-name {
+	color: $dark-blue;
+}
+
+.footer-logo-accent {
+	color: $light-blue;
+}
+
+.footer-description {
+	color: $dark-blue;
+	font-family: $poppins;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	margin: 0;
+}
+
+// Nadpisy sekcí
+.footer-heading {
+	color: $dark-blue;
+	font-family: $poppins;
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.footer-heading-icon {
+	color: $light-blue;
+	width: 20px;
+	height: 20px;
+}
+
+// Navigace
+.footer-nav {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.footer-nav-link {
+	@include simple-hover($dark-blue, $light-blue);
+	font-family: $poppins;
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+// Sociální sítě
+.footer-social {
+	display: flex;
+	gap: 1rem;
+}
+
+.footer-social-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	@include hover-colors($light-blue, $bila, $dark-blue, $light-blue);
+	transition: all 0.3s ease;
+
+	svg {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+// Kontakty
+.footer-contacts {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.footer-contact-link {
+	@include simple-hover($dark-blue, $light-blue);
+	font-family: $poppins;
+	font-size: 1rem;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.footer-contact-icon {
+	color: $light-blue;
+	width: 18px;
+	height: 18px;
+}
+
+// Copyright
+.footer-bottom {
+	padding-top: 2rem;
+	border-top: 2px solid rgba($light-blue, 0.2);
+	text-align: center;
+}
+
+.footer-copyright {
+	color: $light-blue;
+	font-family: $poppins;
+	font-size: 0.95rem;
+	margin: 0;
+}
+
+// Responsive
+@include responsive(tablet) {
+	.footer-content {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+}
