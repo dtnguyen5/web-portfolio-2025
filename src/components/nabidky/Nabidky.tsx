@@ -21,24 +21,24 @@ const CARDS = [
 ]
 
 const Nabidky = () => (
-    <div className="flex flex-col md:flex-row gap-20 justify-center items-center">
-      {CARDS.map((card) => (
-        <div
-          key={card.title}
-          className="nabidky-card flex flex-col justify-center items-center h-[35vh] w-[30vw] gap-7 rounded-[10%]"
-        >
-          <div className="flex flex-row items-center gap-7 w-[80%]">
-            <div className="nabidky-icon-wrap rounded-full flex items-center justify-center w-16 h-16">
-              <FontAwesomeIcon icon={card.icon} style={{ fontSize: '28px', width: '30px', height: '30px' }} />
-            </div>
-            <h3 className="text-[1.61rem] font-bold">{card.title}</h3>
+  <div className="flex flex-col items-center justify-center gap-20 md:flex-row">
+    {CARDS.map((card) => (
+      <div
+        key={card.title}
+        className="flex flex-col items-center justify-center gap-7 h-[35vh] w-[30vw] rounded-[10%] nabidky-card"
+      >
+        <div className="flex flex-row items-center gap-7 w-[80%]">
+          <div className="flex items-center justify-center h-16 w-16 rounded-full nabidky-icon-wrap">
+            <FontAwesomeIcon icon={card.icon} style={{ fontSize: "28px", width: "30px", height: "30px" }} />
           </div>
-          <p className="nabidky-card-text text-center text-[0.95rem] px-6 max-w-[85%]">
-            {card.text}
-          </p>
+          <h3 className="text-[1.61rem] font-bold">{card.title}</h3>
         </div>
-      ))}
-    </div>
+        <p className="px-6 max-w-[85%] text-center text-[0.95rem] nabidky-card-text">
+          {card.text}
+        </p>
+      </div>
+    ))}
+  </div>
 )
 
 export default Nabidky

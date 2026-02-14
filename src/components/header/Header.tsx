@@ -11,13 +11,13 @@ const SOCIAL_LINKS = [
 ]
 
 const Header = () => (
-    <header className="header-root flex items-center justify-center w-full relative z-50 shadow-sm rounded-b-lg">
-      <div className="w-[90%] px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-around items-center h-20 w-full">
+  <header className="relative z-50 flex items-center justify-center w-full rounded-b-lg shadow-sm header-root">
+    <div className="w-[90%] px-4 sm:px-6 lg:px-8">
+      <div className="flex items-center justify-around w-full h-20">
           {/* Logo vlevo */}
-          <div className="font-poppins font-semibold text-xl flex-shrink-0 min-w-fit">
-            <span className="header-logo-primary font-bold text-2xl cursor-pointer">Nguyen </span>
-            <span className="header-logo-secondary font-bold text-2xl cursor-pointer">Duy Tiep</span>
+          <div className="flex-shrink-0 min-w-fit font-poppins text-xl font-semibold">
+            <span className="text-2xl font-bold cursor-pointer header-logo-primary">Nguyen </span>
+            <span className="text-2xl font-bold cursor-pointer header-logo-secondary">Duy Tiep</span>
           </div>
 
           {/* Navigace uprostřed - pouze na desktop */}
