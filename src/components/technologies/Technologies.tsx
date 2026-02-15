@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { IconProp } from "@fortawesome/fontawesome-svg-core"
 import Image from "next/image"
 import ICONS from "@/constants/icons"
 import "./Technologies.scss"
@@ -32,23 +33,17 @@ const Technologies = () => (
 						key={tech.label}
 						className="h-30 w-28 flex flex-col items-center justify-center gap-4 rounded-2xl technologies-card"
 					>
-					<div className="flex items-center justify-center h-13 w-13 rounded-full technologies-icon">
-					{tech.reactIcon ? (
-						<tech.reactIcon className={tech.colorClass ? `technologies-icon-text ${tech.colorClass}` : "technologies-icon-text"} />
-					) : tech.icon ? (
-						typeof tech.icon === 'string' ? (
-						<Image src={tech.icon} alt={tech.label} width={29} height={29} />
-						) : (
-							<FontAwesomeIcon 
-								icon={tech.icon} 
-								className={tech.colorClass ? `technologies-icon-text ${tech.colorClass}` : "technologies-icon-text"}
-							/>
-							)
-						) : tech.image ? (
-						<Image src={tech.image} alt={tech.label} width={29} height={29} />
-						) : (
-							<span className="technologies-icon-text">{tech.abbr}</span>
-						)}
+						<div className="flex items-center justify-center h-13 w-13 rounded-full technologies-icon">
+							{tech.reactIcon ? (
+								<tech.reactIcon className={tech.colorClass ? `technologies-icon-text ${tech.colorClass}` : "technologies-icon-text"} />
+							) : tech.icon ? (
+								<FontAwesomeIcon 
+									icon={tech.icon as IconProp} 
+									className={tech.colorClass ? `technologies-icon-text ${tech.colorClass}` : "technologies-icon-text"}
+								/>
+							) : tech.image ? (
+								<Image src={tech.image} alt={tech.label} width={29} height={29} />
+							) : null}
 						</div>
 						<span className="text-sm font-semibold technologies-label">{tech.label}</span>
 					</div>
