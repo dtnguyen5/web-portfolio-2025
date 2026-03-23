@@ -47,7 +47,7 @@ const HomePage = () => (
             {/* Sociální sítě a tlačítka */}
             <div className="space-y-10">
               <div className="flex flex-wrap items-center gap-y-4">
-                <span className="min-w-[150px] font-inter text-base sm:text-base md:text-lg lg:text-lg text-white">
+                <span className="min-w-home-follow-label font-inter text-base sm:text-base md:text-lg lg:text-lg text-white">
                   {home.hero.followText}
                 </span>
 
@@ -68,10 +68,10 @@ const HomePage = () => (
               <div className="h-8" />
 
               <div className="flex gap-5">
-                <button className="flex items-center justify-center h-[53px] w-[175px] font-inter text-base lg:text-lg font-medium buttons-bold home-primary-button rounded-full transition-all duration-300">
+                <button className="flex items-center justify-center h-home-button-h w-home-button-w font-inter text-base lg:text-lg font-medium buttons-bold home-primary-button rounded-full transition-all duration-300">
                   {home.hero.primaryButton}
                 </button>
-                <button className="flex items-center justify-center h-[53px] w-[175px] border-2 font-inter text-base lg:text-lg font-medium buttons-bold home-secondary-button rounded-full transition-all duration-300">
+                <button className="flex items-center justify-center h-home-button-h w-home-button-w border-2 font-inter text-base lg:text-lg font-medium buttons-bold home-secondary-button rounded-full transition-all duration-300">
                   {home.hero.secondaryButton}
                 </button>
               </div>
@@ -80,7 +80,7 @@ const HomePage = () => (
 
           {/* Right Content - Profile Image */}
           <div className="flex justify-center lg:items-center lg:pr-12 xl:pr-24 h-full">
-            <div className="relative h-[393px] w-[404px] overflow-hidden border-4 rounded-full home-profile-ring"></div>
+            <div className="relative h-home-profile-h w-home-profile-w overflow-hidden border-4 rounded-full home-profile-ring"></div>
           </div>
         </div>
       </div>

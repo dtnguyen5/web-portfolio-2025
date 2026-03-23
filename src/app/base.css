@@ -9,6 +9,11 @@
   --color-modra-low: rgba(7, 21, 56, 0.55);
   --font-poppins: "Poppins", sans-serif;
   --font-inter: "Inter", sans-serif;
+  --spacing-home-button-h: 53px;
+  --spacing-home-button-w: 175px;
+  --spacing-home-follow-label: 150px;
+  --spacing-home-profile-h: 393px;
+  --spacing-home-profile-w: 404px;
 }
 
 * {
