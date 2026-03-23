@@ -1,0 +1,293 @@
+{
+  "header": {
+    "logo": {
+      "primary": "Nguyen",
+      "secondary": "Duy Tiep"
+    },
+    "socialLinks": [
+      {
+        "href": "https://www.instagram.com/dtnguyen5_/",
+        "iconKey": "instagram",
+        "label": "Instagram"
+      },
+      {
+        "href": "https://www.linkedin.com/in/duy-tiep-nguyen-7325002a3/",
+        "iconKey": "linkedin",
+        "label": "LinkedIn"
+      },
+      {
+        "href": "https://www.facebook.com/honza.nguyen.10297/",
+        "iconKey": "facebook",
+        "label": "Facebook"
+      },
+      {
+        "href": "https://github.com/dtnguyen5",
+        "iconKey": "github",
+        "label": "GitHub"
+      }
+    ]
+  },
+  "navbar": {
+    "navLinks": [
+      {
+        "label": "Domů",
+        "href": "/"
+      },
+      {
+        "label": "O mně",
+        "href": "/about"
+      },
+      {
+        "label": "Projekty",
+        "href": "/projects"
+      },
+      {
+        "label": "Kontakty",
+        "href": "/contacts"
+      }
+    ],
+    "socialLinks": [
+      {
+        "href": "#",
+        "iconKey": "instagram",
+        "label": "Instagram"
+      },
+      {
+        "href": "#",
+        "iconKey": "linkedin",
+        "label": "LinkedIn"
+      },
+      {
+        "href": "#",
+        "iconKey": "facebook",
+        "label": "Facebook"
+      },
+      {
+        "href": "#",
+        "iconKey": "github",
+        "label": "GitHub"
+      }
+    ],
+    "mobile": {
+      "toggleMenuAriaLabel": "Toggle menu",
+      "followLabel": "Sledujte mě na:"
+    }
+  },
+  "home": {
+    "hero": {
+      "greeting": "Ahoj, jsem",
+      "name": "Nguyen Duy Tiep",
+      "wave": "👋",
+      "rolePrimary": "Front-end developer",
+      "roleConnector": " & ",
+      "roleSecondary": "UI/UX designer",
+      "descriptionLine1": "Zde najdete ukázky mých webových projektů. Tvořím moderní",
+      "descriptionLine2": "a funkční weby – podívejte se na mé práce a ozvěte se pro spolupráci!",
+      "followText": "Sledujte mě na:",
+      "primaryButton": "Prozkoumat",
+      "secondaryButton": "Zkontaktovat"
+    },
+    "socialLinks": [
+      {
+        "href": "#",
+        "iconKey": "instagram",
+        "label": "Instagram"
+      },
+      {
+        "href": "#",
+        "iconKey": "linkedin",
+        "label": "LinkedIn"
+      },
+      {
+        "href": "#",
+        "iconKey": "facebook",
+        "label": "Facebook"
+      },
+      {
+        "href": "#",
+        "iconKey": "github",
+        "label": "GitHub"
+      }
+    ]
+  },
+  "about": {
+    "infoItems": [
+      {
+        "iconKey": "user",
+        "text": "Nguyen Duy Tiep"
+      },
+      {
+        "iconKey": "birthdayCake",
+        "text": "18 let"
+      },
+      {
+        "iconKey": "mapMarkerAlt",
+        "text": "Plzeň"
+      },
+      {
+        "iconKey": "graduationCap",
+        "text": "SŠ INFIS"
+      }
+    ],
+    "title": "O mně",
+    "paragraphs": [
+      "Jsem webový vývojář z Plzně a specializuji se na tvorbu moderních, funkčních a snadno udržovatelných webových stránek. Weby vytvářím v Reactu, TypeScriptu, TailwindCSS a SCSS. Díky těmto technologiím tvořím rychlé, dynamické a škálovatelné projekty, které dobře vypadají a snadno se upravují podle potřeby klienta.",
+      "Zakládám si na přehlednosti, responzivitě a vizuální atraktivitě. Sleduji aktuální trendy a neustále rozvíjím své dovednosti, abych svým klientům poskytoval moderní a efektivní řešení."
+    ],
+    "offersTitle": "Co Vám mohu nabídnout ?"
+  },
+  "nabidky": {
+    "cards": [
+      {
+        "title": "Návrh webu",
+        "iconKey": "desktop",
+        "text": "Vytvářím moderní a esteticky promyšlené návrhy webových stránek, které dobře vypadají a odpovídají požadavkům cílové skupiny. Důraz kladu na přehlednost, uživatelskou přívětivost a vizuální identitu značky."
+      },
+      {
+        "title": "Tvorba webu",
+        "iconKey": "code",
+        "text": "Vytvářím plně funkční a responzivní webové stránky s využitím moderních technologií jako React, TailwindCSS a TypeScript. Dbám na čistý kód, škálovatelnost a snadnou správu. Výsledkem je rychlý web připravený na budoucí rozšíření."
+      },
+      {
+        "title": "Optimalizace webu",
+        "iconKey": "gear",
+        "text": "Při optimalizaci dbám na rychlé načítání a přehlednost webu. Upravuji rozložení, strukturu a kód tak, aby byl jednoduchý, srozumitelný a bez rušivých prvků. Výsledkem je snadnější správa webu a lepší uživatelská zkušenost."
+      }
+    ]
+  },
+  "technologies": {
+    "title": "Technologie",
+    "items": [
+      {
+        "label": "React",
+        "iconKey": "react",
+        "colorClass": "icon-cyan"
+      },
+      {
+        "label": "ViteJs",
+        "image": "/Vite.js.svg"
+      },
+      {
+        "label": "Next.Js",
+        "image": "/Next.js.svg"
+      },
+      {
+        "label": "TailwindCSS",
+        "image": "/Tailwind CSS.svg"
+      },
+      {
+        "label": "SCSS",
+        "image": "/Sass.svg"
+      },
+      {
+        "label": "TypeScript",
+        "image": "/TypeScript.svg"
+      },
+      {
+        "label": "VSCode",
+        "image": "/VSCode.svg"
+      },
+      {
+        "label": "Git",
+        "image": "/Git.svg"
+      },
+      {
+        "label": "GitHub",
+        "iconKey": "github",
+        "colorClass": "icon-white"
+      },
+      {
+        "label": "Figma",
+        "image": "/Figma.svg"
+      },
+      {
+        "label": "Framer",
+        "reactIconKey": "framer",
+        "colorClass": "icon-white"
+      },
+      {
+        "label": "Blender",
+        "image": "/Blender.svg"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projekty",
+    "placeholders": [
+      {
+        "id": "project-1"
+      },
+      {
+        "id": "project-2"
+      },
+      {
+        "id": "project-3"
+      },
+      {
+        "id": "project-4"
+      }
+    ]
+  },
+  "footer": {
+    "logo": {
+      "primary": "Nguyen",
+      "secondary": "Duy Tiep"
+    },
+    "descriptionLines": [
+      "Front-end developer se specializací na UI/UX,",
+      "moderní webové technologie a tvorbu plynulých",
+      "digitálních zážitků s čistým kódem a kreativním",
+      "tokem."
+    ],
+    "navigationHeading": "Navigace",
+    "navigationLinks": [
+      {
+        "href": "/",
+        "label": "Domů"
+      },
+      {
+        "href": "/about",
+        "label": "O mně"
+      },
+      {
+        "href": "/projects",
+        "label": "Projekty"
+      },
+      {
+        "href": "/contacts",
+        "label": "Kontakt"
+      }
+    ],
+    "socialHeading": "Najdete mě na",
+    "socialLinks": [
+      {
+        "href": "#",
+        "iconKey": "instagram",
+        "label": "Instagram"
+      },
+      {
+        "href": "#",
+        "iconKey": "linkedin",
+        "label": "LinkedIn"
+      },
+      {
+        "href": "#",
+        "iconKey": "facebook",
+        "label": "Facebook"
+      },
+      {
+        "href": "#",
+        "iconKey": "github",
+        "label": "GitHub"
+      }
+    ],
+    "contactsHeading": "Kontakty",
+    "contacts": {
+      "phone": "+420 608 088 388",
+      "phoneHref": "tel:+420608088388",
+      "email": "duytiepn1@gmail.com",
+      "emailHref": "mailto:duytiepn1@gmail.com"
+    },
+    "copyrightName": "Nguyen Duy Tiep"
+  }
+}

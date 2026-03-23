@@ -1,23 +1,13 @@
 "use client"
 import { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { IconProp } from "@fortawesome/fontawesome-svg-core"
 import ICONS from "@/constants/icons"
+import contentData from "@/data/content.json"
 import Link from "next/link"
 import "./Navbar.scss"
 
-const NAV_LINKS = [
-  { label: "Domů", href: "/" },
-  { label: "O mně", href: "/about" },
-  { label: "Projekty", href: "/projects" },
-  { label: "Kontakty", href: "/contacts" },
-]
-
-const SOCIAL_LINKS = [
-  { href: "#", icon: ICONS.instagram, label: "Instagram" },
-  { href: "#", icon: ICONS.linkedin, label: "LinkedIn" },
-  { href: "#", icon: ICONS.facebook, label: "Facebook" },
-  { href: "#", icon: ICONS.github, label: "GitHub" },
-]
+const { navbar } = contentData
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -26,7 +16,7 @@ const Navbar = () => {
     <>
       {/* Desktop Navigation - centered, bold, spacing */}
       <nav className="hidden md:flex items-center justify-center gap-15 space-x-8 lg:space-x-12 w-xl font-poppins text-base font-bold">
-        {NAV_LINKS.map((link) => (
+        {navbar.navLinks.map((link) => (
           <Link
             key={link.href}
             href={link.href}
@@ -41,7 +31,7 @@ const Navbar = () => {
       <button
         className="md:hidden p-2 navbar-menu-button"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        aria-label="Toggle menu"
+        aria-label={navbar.mobile.toggleMenuAriaLabel}
       >
         {isMenuOpen ? (
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -58,7 +48,7 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="absolute left-0 right-0 top-full z-50 border-t border-gray-200 shadow-lg md:hidden navbar-mobile-menu">
           <nav className="flex flex-col py-4">
-            {NAV_LINKS.map((link) => (
+            {navbar.navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -71,15 +61,15 @@ const Navbar = () => {
 
             {/* Mobile Social Icons */}
               <div className="mt-2 flex items-center space-x-6 border-t border-gray-200 px-6 py-4">
-                <span className="font-poppins text-sm navbar-mobile-label">Sledujte mě na:</span>
-              {SOCIAL_LINKS.map((link) => (
+                <span className="font-poppins text-sm navbar-mobile-label">{navbar.mobile.followLabel}</span>
+              {navbar.socialLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   className="transition-colors duration-200 navbar-social-link"
                   aria-label={link.label}
                 >
-                  <FontAwesomeIcon icon={link.icon} className="w-5 h-5" />
+                  <FontAwesomeIcon icon={ICONS[link.iconKey as keyof typeof ICONS] as IconProp} className="w-5 h-5" />
                 </a>
               ))}
             </div>

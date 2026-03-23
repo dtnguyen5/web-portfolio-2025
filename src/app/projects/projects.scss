@@ -1,0 +1,35 @@
+@use "../globals.scss" as *;
+
+.projects-root {
+	background-color: $dark-blue;
+}
+
+.projects-title {
+	color: $light-blue;
+}
+
+.projects-title-underline {
+	background-color: $light-blue;
+}
+
+.project-placeholder-card {
+	background-color: $dark-blue;
+	border: 1px solid rgba($light-blue, 0.15);
+	box-shadow:
+		0 10px 22px rgba(0, 0, 0, 0.45),
+		0 0 0 1px rgba($light-blue, 0.08) inset;
+}
+
+.project-placeholder-top {
+	background-color: #f5f5f5;
+}
+
+.project-placeholder-bottom {
+	background-color: $dark-blue;
+}
+
+@include responsive(tablet) {
+	.projects-title {
+		font-size: 33px;
+	}
+}

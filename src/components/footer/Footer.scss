@@ -3,6 +3,7 @@
 .footer-root {
 	background-color: $bila;
 	border-top: 3px solid $light-blue;
+	margin-top: 170px;
 	padding: 48px 0 24px;
 }
 
@@ -142,6 +143,10 @@
 
 // Responsive
 @include responsive(tablet) {
+	.footer-root {
+		margin-top: 80px;
+	}
+
 	.footer-content {
 		grid-template-columns: 1fr;
 		gap: 32px;

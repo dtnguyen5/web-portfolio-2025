@@ -1,14 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { IconProp } from "@fortawesome/fontawesome-svg-core"
 import ICONS from "@/constants/icons"
+import contentData from "@/data/content.json"
 import Navbar from "@/components/navbar/Navbar"
 import "./Header.scss"
 
-const SOCIAL_LINKS = [
-  { href: "https://www.instagram.com/dtnguyen5_/", icon: ICONS.instagram, label: "Instagram" },
-  { href: "https://www.linkedin.com/in/duy-tiep-nguyen-7325002a3/", icon: ICONS.linkedin, label: "LinkedIn" },
-  { href: "https://www.facebook.com/honza.nguyen.10297/", icon: ICONS.facebook, label: "Facebook" },
-  { href: "https://github.com/dtnguyen5", icon: ICONS.github, label: "GitHub" },
-]
+const { header } = contentData
 
 const Header = () => (
   <header className="relative z-50 flex items-center justify-center w-full rounded-b-lg shadow-sm header-root">
@@ -16,8 +13,8 @@ const Header = () => (
       <div className="flex items-center justify-around w-full h-20">
           {/* Logo vlevo */}
           <div className="flex-shrink-0 min-w-fit font-poppins text-xl font-semibold">
-            <span className="text-2xl font-bold cursor-pointer header-logo-primary">Nguyen </span>
-            <span className="text-2xl font-bold cursor-pointer header-logo-secondary">Duy Tiep</span>
+            <span className="text-2xl font-bold cursor-pointer header-logo-primary">{header.logo.primary} </span>
+            <span className="text-2xl font-bold cursor-pointer header-logo-secondary">{header.logo.secondary}</span>
           </div>
 
           {/* Navigace uprostřed - pouze na desktop */}
@@ -27,7 +24,7 @@ const Header = () => (
 
           {/* Ikony vpravo - pouze na desktop */}
           <div className="hidden md:flex items-center gap-6 flex-shrink-0 min-w-fit">
-            {SOCIAL_LINKS.map((link) => (
+            {header.socialLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
@@ -36,7 +33,7 @@ const Header = () => (
                 className="header-social-link transition-colors duration-200"
                 aria-label={link.label}
               >
-                <FontAwesomeIcon icon={link.icon} className="w-7 h-7" />
+                <FontAwesomeIcon icon={ICONS[link.iconKey as keyof typeof ICONS] as IconProp} className="w-7 h-7" />
               </a>
             ))}
           </div>

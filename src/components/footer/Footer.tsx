@@ -1,20 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { IconProp } from "@fortawesome/fontawesome-svg-core"
 import ICONS from "@/constants/icons"
+import contentData from "@/data/content.json"
 import "./Footer.scss"
 
-const NAVIGATION_LINKS = [
-  { href: "/", label: "Domů" },
-  { href: "/about", label: "O mně" },
-  { href: "/projects", label: "Projekty" },
-  { href: "/contacts", label: "Kontakt" },
-]
-
-const SOCIAL_LINKS = [
-  { href: "#", icon: ICONS.instagram, label: "Instagram" },
-  { href: "#", icon: ICONS.linkedin, label: "LinkedIn" },
-  { href: "#", icon: ICONS.facebook, label: "Facebook" },
-  { href: "#", icon: ICONS.github, label: "GitHub" },
-]
+const { footer } = contentData
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -27,14 +17,16 @@ const Footer = () => {
           {/* Logo a popis */}
           <div className="footer-column">
             <h3 className="footer-logo">
-              <span className="footer-logo-name">Nguyen</span>{" "}
-              <span className="footer-logo-accent">Duy Tiep</span>
+              <span className="footer-logo-name">{footer.logo.primary}</span>{" "}
+              <span className="footer-logo-accent">{footer.logo.secondary}</span>
             </h3>
             <p className="footer-description">
-              Front-end developer se specializací na UI/UX,<br />
-              moderní webové technologie a tvorbu plynulých<br />
-              digitálních zážitků s čistým kódem a kreativním<br />
-              tokem.
+              {footer.descriptionLines.map((line, index) => (
+                <span key={line}>
+                  {line}
+                  {index < footer.descriptionLines.length - 1 && <br />}
+                </span>
+              ))}
             </p>
           </div>
 
@@ -42,10 +34,10 @@ const Footer = () => {
           <div className="footer-column">
             <h4 className="footer-heading">
               <FontAwesomeIcon icon={ICONS.desktop} className="footer-heading-icon" />
-              Navigace
+              {footer.navigationHeading}
             </h4>
             <nav className="footer-nav">
-              {NAVIGATION_LINKS.map((link) => (
+              {footer.navigationLinks.map((link) => (
                 <a key={link.label} href={link.href} className="footer-nav-link">
                   {link.label}
                 </a>
@@ -57,17 +49,17 @@ const Footer = () => {
           <div className="footer-column">
             <h4 className="footer-heading">
               <FontAwesomeIcon icon={ICONS.code} className="footer-heading-icon" />
-              Najdete mě na
+              {footer.socialHeading}
             </h4>
             <div className="footer-social">
-              {SOCIAL_LINKS.map((link) => (
+              {footer.socialLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   className="footer-social-link"
                   aria-label={link.label}
                 >
-                  <FontAwesomeIcon icon={link.icon} />
+                  <FontAwesomeIcon icon={ICONS[link.iconKey as keyof typeof ICONS] as IconProp} />
                 </a>
               ))}
             </div>
@@ -75,15 +67,15 @@ const Footer = () => {
 
           {/* Kontakty */}
           <div className="footer-column">
-            <h4 className="footer-heading">Kontakty</h4>
+            <h4 className="footer-heading">{footer.contactsHeading}</h4>
             <div className="footer-contacts">
-              <a href="tel:+420608088388" className="footer-contact-link">
+              <a href={footer.contacts.phoneHref} className="footer-contact-link">
                 <FontAwesomeIcon icon={ICONS.desktop} className="footer-contact-icon" />
-                +420 608 088 388
+                {footer.contacts.phone}
               </a>
-              <a href="mailto:duytiepn1@gmail.com" className="footer-contact-link">
+              <a href={footer.contacts.emailHref} className="footer-contact-link">
                 <FontAwesomeIcon icon={ICONS.code} className="footer-contact-icon" />
-                duytiepn1@gmail.com
+                {footer.contacts.email}
               </a>
             </div>
           </div>
@@ -92,7 +84,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="footer-bottom">
           <p className="footer-copyright">
-            © {currentYear} Nguyen Duy Tiep
+            © {currentYear} {footer.copyrightName}
           </p>
         </div>
       </div>

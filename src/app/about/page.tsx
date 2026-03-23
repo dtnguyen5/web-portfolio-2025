@@ -3,15 +3,12 @@ import Footer from "@/components/footer/Footer"
 import Nabidky from "@/components/nabidky/Nabidky"
 import Technologies from "@/components/technologies/Technologies"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { IconProp } from "@fortawesome/fontawesome-svg-core"
 import ICONS from "@/constants/icons"
+import contentData from "@/data/content.json"
 import "./about.scss"
 
-const INFO_ITEMS = [
-  { icon: ICONS.user, text: "Nguyen Duy Tiep" },
-  { icon: ICONS.birthdayCake, text: "18 let" },
-  { icon: ICONS.mapMarkerAlt, text: "Plzeň" },
-  { icon: ICONS.graduationCap, text: "SŠ INFIS" },
-]
+const { about } = contentData
 
 const AboutPage = () => (
   <div className="min-h-screen w-full flex flex-col about-root" lang="cs">
@@ -21,7 +18,7 @@ const AboutPage = () => (
       <div className="flex-1">
         {/* Section 1 */}
         <div className="w-full h-[80vh] flex justify-center items-center">
-        <div className="w-[95%] h-[60vh] flex items-center justify-around">
+          <div className="w-[95%] h-[60vh] flex items-center justify-around">
           {/* Profile + Info vedle sebe */}
           <div className="flex items-center gap-24">
             {/* Profile */}
@@ -31,9 +28,9 @@ const AboutPage = () => (
 
             {/* Info */}
             <div className="flex flex-col gap-10 min-w-[260px]">
-              {INFO_ITEMS.map((item) => (
+              {about.infoItems.map((item) => (
                 <div key={item.text} className="flex items-center gap-6">
-                  <FontAwesomeIcon icon={item.icon} className="about-info-icon" style={{ width: "38px", height: "38px" }} />
+                  <FontAwesomeIcon icon={ICONS[item.iconKey as keyof typeof ICONS] as IconProp} className="about-info-icon" style={{ width: "38px", height: "38px" }} />
                   <span className="about-info-text text-[1.4rem] font-poppins whitespace-nowrap">{item.text}</span>
                 </div>
               ))}
@@ -42,29 +39,29 @@ const AboutPage = () => (
 
           {/* About text */}
           <div className="pl-20 flex flex-col justify-center w-[32vw] gap-6">
-            <h2 className="about-section-title text-4xl font-bold mb-8 font-poppins text-center">O mně</h2>
+            <h2 className="about-section-title text-4xl font-bold mb-8 font-poppins text-center">{about.title}</h2>
             <div className="rounded-[30px] p-8">
               <div className="flex flex-col gap-6">
                 <p className="about-body-text text-[1.2rem] font-poppins leading-normal break-words">
-                  Jsem webový vývojář z Plzně a specializuji se na tvorbu moderních, funkčních a snadno udržovatelných webových stránek. Weby vytvářím v Reactu, TypeScriptu, TailwindCSS a{'\u00A0'}SCSS. Díky těmto technologiím tvořím rychlé, dynamické a{'\u00A0'}škálovatelné projekty, které dobře vypadají a snadno se upravují podle potřeby klienta.
+                  {about.paragraphs[0]}
                 </p>
                 <p className="about-body-text text-[1.2rem] font-poppins leading-normal break-words">
-                  Zakládám si na přehlednosti, responzivitě a vizuální atraktivitě. Sleduji aktuální trendy a neustále rozvíjím své dovednosti, abych{'\u00A0'} svým klientům poskytoval moderní a efektivní řešení.
+                  {about.paragraphs[1]}
                 </p>
               </div>
             </div>
           </div>
 
+          </div>
         </div>
-      </div>
 
-      {/* Section 2 */}
+        {/* Section 2 */}
       <div className="w-full h-[70vh] flex justify-center items-center">
         <div className="w-[82%] h-[70vh] flex flex-col gap-17">
 
           {/* Nadpis */}
           <div className="w-full flex flex-col gap-7">
-            <h2 className="about-section-title text-4xl font-bold font-poppins">Co Vám mohu nabídnout ?</h2>
+            <h2 className="about-section-title text-4xl font-bold font-poppins">{about.offersTitle}</h2>
             <div className="w-[125px] h-[7px] about-section-underline rounded-r-lg"></div>
           </div>
 
@@ -76,15 +73,17 @@ const AboutPage = () => (
       </div>
 
       {/* Section 3 */}
-      <div className="w-full flex justify-center items-center py-20 mb-60">
+      <div className="w-full flex justify-center items-center py-20 pb-36">
         <div className="w-[90%]">
           <Technologies />
         </div>
       </div>
-  </div>
+      </div>
 
       {/* Footer */}
-      <Footer />
+      <div className="mt-36 md:mt-44">
+        <Footer />
+      </div>
   </div>
 )
 
