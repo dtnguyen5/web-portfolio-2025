@@ -211,6 +211,45 @@
       }
     ]
   },
+  "contacts": {
+    "title": "Zkontaktujte mě",
+    "socialLinks": [
+      {
+        "href": "https://github.com/dtnguyen5",
+        "iconKey": "github",
+        "label": "GitHub",
+        "description": "Ukázky kódu a projektů"
+      },
+      {
+        "href": "https://www.linkedin.com/in/duy-tiep-nguyen-7325002a3/",
+        "iconKey": "linkedin",
+        "label": "LinkedIn",
+        "description": "Navázat profesní kontakt"
+      },
+      {
+        "href": "https://www.instagram.com/dtnguyen5_/",
+        "iconKey": "instagram",
+        "label": "Instagram",
+        "description": "Sdílím, co právě žiju"
+      },
+      {
+        "href": "https://www.facebook.com/honza.nguyen.10297/",
+        "iconKey": "facebook",
+        "label": "Facebook",
+        "description": "Zůstávám v kontaktu"
+      }
+    ],
+    "formTitle": "Napište mi",
+    "form": {
+      "nameLabel": "Vaše jméno",
+      "namePlaceholder": "Vaše jméno",
+      "emailLabel": "Váš E-mail",
+      "emailPlaceholder": "Váš E-mail",
+      "messageLabel": "Zpráva",
+      "messagePlaceholder": "Zpráva",
+      "submitButton": "Odeslat"
+    }
+  },
   "projects": {
     "title": "Projekty",
     "placeholders": [

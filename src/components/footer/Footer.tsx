@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { IconProp } from "@fortawesome/fontawesome-svg-core"
-import ICONS from "@/constants/icons"
+import ICONS, { type IconKey } from "@/constants/icons"
 import contentData from "@/data/content.json"
 import "./Footer.scss"
 
@@ -59,7 +59,7 @@ const Footer = () => {
                   className="footer-social-link"
                   aria-label={link.label}
                 >
-                  <FontAwesomeIcon icon={ICONS[link.iconKey as keyof typeof ICONS] as IconProp} />
+                  <FontAwesomeIcon icon={ICONS[link.iconKey as IconKey] as IconProp} />
                 </a>
               ))}
             </div>

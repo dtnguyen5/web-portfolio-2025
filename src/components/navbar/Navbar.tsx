@@ -1,3 +1,4 @@
+
 "use client"
 import { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -66,10 +67,10 @@ const Navbar = () => {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="transition-colors duration-200 navbar-social-link"
+                  className="navbar-icon-container transition-colors duration-200 navbar-social-link"
                   aria-label={link.label}
                 >
-                  <FontAwesomeIcon icon={ICONS[link.iconKey as keyof typeof ICONS] as IconProp} className="w-5 h-5" />
+                  <FontAwesomeIcon icon={ICONS[link.iconKey as keyof typeof ICONS] as IconProp} />
                 </a>
               ))}
             </div>

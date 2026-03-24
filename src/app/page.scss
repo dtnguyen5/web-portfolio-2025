@@ -7,6 +7,61 @@ $button-variants: (
 	"secondary": (transparent, $light-blue, $light-blue, $bila)
 );
 
+// Animace
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(100, 200, 255, 0.5), 0 0 20px rgba(100, 200, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(100, 200, 255, 0.8), 0 0 40px rgba(100, 200, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(100, 200, 255, 0.5), 0 0 20px rgba(100, 200, 255, 0.2);
+  }
+}
+
 .text2 {
   font-family: $inter;
 }
@@ -46,4 +101,72 @@ $button-variants: (
 .home-profile-ring {
   border-color: $light-blue;
   background-color: $bila;
+}
+
+// Animation utilities
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-in-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-in-out;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.8s ease-out;
+}
+
+.animate-pulse-glow {
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+// Staggered animations with smooth timing
+.animate-stagger {
+  & > * {
+    animation: slideInUp 0.8s ease-out backwards;
+    
+    &:nth-child(1) { animation-delay: 0.1s; }
+    &:nth-child(2) { animation-delay: 0.2s; }
+    &:nth-child(3) { animation-delay: 0.3s; }
+    &:nth-child(4) { animation-delay: 0.4s; }
+    &:nth-child(5) { animation-delay: 0.5s; }
+    &:nth-child(6) { animation-delay: 0.6s; }
+    &:nth-child(7) { animation-delay: 0.7s; }
+    &:nth-child(8) { animation-delay: 0.8s; }
+    &:nth-child(9) { animation-delay: 0.9s; }
+    &:nth-child(10) { animation-delay: 1.0s; }
+  }
+}
+
+// Smooth hover effects for interactive elements
+.home-social-button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  
+  &:hover {
+    transform: translateY(-4px);
+  }
+  
+  &:active {
+    transform: translateY(-1px);
+  }
+}
+
+.home-primary-button,
+.home-secondary-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  
+  &:hover {
+    transform: translateY(-3px);
+  }
+  
+  &:active {
+    transform: translateY(-1px);
+  }
 }

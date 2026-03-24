@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { IconProp } from "@fortawesome/fontawesome-svg-core"
-import ICONS from "@/constants/icons"
+import ICONS, { type IconKey } from "@/constants/icons"
 import contentData from "@/data/content.json"
 import Navbar from "@/components/navbar/Navbar"
 import "./Header.scss"
@@ -33,7 +33,7 @@ const Header = () => (
                 className="header-social-link transition-colors duration-200"
                 aria-label={link.label}
               >
-                <FontAwesomeIcon icon={ICONS[link.iconKey as keyof typeof ICONS] as IconProp} className="w-7 h-7" />
+                <FontAwesomeIcon icon={ICONS[link.iconKey as IconKey] as IconProp} className="w-7 h-7" />
               </a>
             ))}
           </div>

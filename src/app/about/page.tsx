@@ -18,7 +18,7 @@ const AboutPage = () => (
       <div className="flex-1">
         {/* Section 1 */}
         <div className="w-full h-[80vh] flex justify-center items-center">
-          <div className="w-[95%] h-[60vh] flex items-center justify-around">
+          <div className="w-[95%] h-[60vh] flex items-center justify-around animate-stagger">
           {/* Profile + Info vedle sebe */}
           <div className="flex items-center gap-24">
             {/* Profile */}
@@ -27,7 +27,7 @@ const AboutPage = () => (
             </div>
 
             {/* Info */}
-            <div className="flex flex-col gap-10 min-w-[260px]">
+            <div className="flex flex-col gap-10 min-w-[260px] animate-stagger">
               {about.infoItems.map((item) => (
                 <div key={item.text} className="flex items-center gap-6">
                   <FontAwesomeIcon icon={ICONS[item.iconKey as keyof typeof ICONS] as IconProp} className="about-info-icon" style={{ width: "38px", height: "38px" }} />
@@ -60,7 +60,7 @@ const AboutPage = () => (
         <div className="w-[82%] h-[70vh] flex flex-col gap-17">
 
           {/* Nadpis */}
-          <div className="w-full flex flex-col gap-7">
+          <div className="w-full flex flex-col gap-7 animate-slide-in-up">
             <h2 className="about-section-title text-4xl font-bold font-poppins">{about.offersTitle}</h2>
             <div className="w-[125px] h-[7px] about-section-underline rounded-r-lg"></div>
           </div>

@@ -25,6 +25,30 @@ $navbar-links: (
 	color: $dark-blue;
 }
 
+.navbar-icon-container {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	width: 80px !important;
+	height: 80px !important;
+	min-width: 80px !important;
+	min-height: 80px !important;
+	max-width: 80px !important;
+	max-height: 80px !important;
+	flex-shrink: 0 !important;
+	font-size: 80px !important;
+	line-height: 80px !important;
+	padding: 0 !important;
+	
+	svg {
+		width: 100% !important;
+		height: 100% !important;
+		max-width: 80px !important;
+		max-height: 80px !important;
+		font-size: 80px !important;
+	}
+}
+
 .Button {
 	&-navigation {
 		font-family: $poppins;

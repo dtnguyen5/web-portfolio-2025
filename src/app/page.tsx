@@ -15,7 +15,7 @@ const HomePage = () => (
       style={{ minHeight: "calc(100vh - 120px)" }}
     >
       <div className="w-full px-8 lg:px-16 xl:px-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-2 h-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-2 h-full animate-stagger">
           {/* Left Content */}
           <div className="flex flex-col justify-center justify-self-center pl-4 sm:pl-6 md:pl-8 w-[66%] max-w-2xl text-left text-white">
             {/* Nadpis */}
@@ -51,12 +51,12 @@ const HomePage = () => (
                   {home.hero.followText}
                 </span>
 
-                <div className="ml-6 flex items-center gap-4">
+                <div className="ml-6 flex items-center gap-4 animate-stagger">
                   {home.socialLinks.map((link) => (
                     <a
                       key={link.label}
                       href={link.href}
-                      className="flex items-center justify-center p-5 h-10 w-10 home-social-button rounded-full transition-all duration-300"
+                      className="flex items-center justify-center p-5 h-10 w-10 home-social-button rounded-full transition-all duration-300 animate-pulse-glow"
                       aria-label={link.label}
                     >
                       <FontAwesomeIcon icon={ICONS[link.iconKey as keyof typeof ICONS] as IconProp} className="w-5 h-7" />
@@ -68,10 +68,10 @@ const HomePage = () => (
               <div className="h-8" />
 
               <div className="flex gap-5">
-                <button className="flex items-center justify-center h-home-button-h w-home-button-w font-inter text-base lg:text-lg font-medium buttons-bold home-primary-button rounded-full transition-all duration-300">
+                <button className="flex items-center justify-center h-home-button-h w-home-button-w font-inter text-base lg:text-lg font-medium buttons-bold home-primary-button rounded-full transition-all duration-300 animate-slide-in-up">
                   {home.hero.primaryButton}
                 </button>
-                <button className="flex items-center justify-center h-home-button-h w-home-button-w border-2 font-inter text-base lg:text-lg font-medium buttons-bold home-secondary-button rounded-full transition-all duration-300">
+                <button className="flex items-center justify-center h-home-button-h w-home-button-w border-2 font-inter text-base lg:text-lg font-medium buttons-bold home-secondary-button rounded-full transition-all duration-300 animate-slide-in-up">
                   {home.hero.secondaryButton}
                 </button>
               </div>
