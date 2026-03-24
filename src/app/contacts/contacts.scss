@@ -5,23 +5,23 @@
 	display: flex !important;
 	align-items: center !important;
 	justify-content: center !important;
-	width: 80px !important;
-	height: 80px !important;
-	min-width: 80px !important;
-	min-height: 80px !important;
-	max-width: 80px !important;
-	max-height: 80px !important;
+	width: 5vw !important;
+	height: 5vh !important;
+	min-width: 5vw !important;
+	min-height: 5vh !important;
+	max-width: 5vw !important;
+	max-height: 5vh !important;
 	flex-shrink: 0 !important;
-	font-size: 80px !important;
-	line-height: 80px !important;
+	font-size: 5rem !important;
+	line-height: 5vh !important;
 	padding: 0 !important;
 	
 	svg {
 		width: 100% !important;
 		height: 100% !important;
-		max-width: 80px !important;
-		max-height: 80px !important;
-		font-size: 80px !important;
+		max-width: 5vw !important;
+		max-height: 5vh !important;
+		font-size: 5rem !important;
 	}
 }
 
@@ -142,15 +142,15 @@
 }
 
 .contacts-social-icon {
-  width: 64px;
-  height: 64px;
+  width: 4vw;
+  height: 4vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgba($dark-blue2, 0.15);
   border-radius: 16px;
   color: $light-blue;
-  font-size: 28px;
+  font-size: 1.75rem;
   flex-shrink: 0;
 }
 
@@ -174,7 +174,7 @@
 
 .contacts-arrow {
   color: rgba($dark-blue2, 0.4);
-  font-size: 18px;
+  font-size: 1.125rem;
   transition: all 0.3s ease-in-out;
   flex-shrink: 0;
 }
@@ -243,7 +243,7 @@
 
 .contacts-textarea {
   resize: vertical;
-  min-height: 180px;
+  min-height: 11.25vh;
 }
 
 // Status messages
