@@ -16,9 +16,9 @@ const AboutPage = () => (
       
       {/* Main content */}
       <div className="flex-1">
-        {/* Section 1 */}
+        {/* Section 1 - O mně */}
         <div className="w-full h-[80vh] flex justify-center items-center">
-          <div className="w-[95%] h-[60vh] flex items-center justify-around animate-stagger">
+          <div className="w-[90vw] h-[60vh] flex items-center justify-around gap-12 animate-stagger">
           {/* Profile + Info vedle sebe */}
           <div className="flex items-center gap-24">
             {/* Profile */}
@@ -55,9 +55,9 @@ const AboutPage = () => (
           </div>
         </div>
 
-        {/* Section 2 */}
+        {/* Section 2 - Co Vám mohu nabídnout */}
       <div className="w-full h-[70vh] flex justify-center items-center">
-        <div className="w-[82%] h-[70vh] flex flex-col gap-17">
+        <div className="w-[82vw] h-[70vh] flex flex-col gap-17">
 
           {/* Nadpis */}
           <div className="w-full flex flex-col gap-7 animate-slide-in-up">
@@ -72,9 +72,9 @@ const AboutPage = () => (
         </div>
       </div>
 
-      {/* Section 3 */}
-      <div className="w-full flex justify-center items-center py-20 pb-36">
-        <div className="w-[90%]">
+      {/* Section 3 - Technologie */}
+      <div className="w-full h-[80vh] flex justify-center items-center">
+        <div className="w-[90vw]">
           <Technologies />
         </div>
       </div>

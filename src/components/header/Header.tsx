@@ -3,6 +3,7 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core"
 import ICONS, { type IconKey } from "@/constants/icons"
 import contentData from "@/data/content.json"
 import Link from "next/link"
+import MobileNav from "@/components/navbar/MobileNav"
 import "./Header.scss"
 
 const { header, navbar } = contentData
@@ -47,7 +48,9 @@ const Header = () => (
           </div>
 
           {/* Mobile menu button - pouze na mobile */}
-          {/* TODO: Implementovat mobilní menu */}
+          <div className="lg:hidden">
+            <MobileNav />
+          </div>
         </div>
       </div>
     </header>
