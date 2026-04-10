@@ -88,6 +88,7 @@ const ContactsPage: FC = () => {
         })
       }
     } catch (error) {
+      console.error(error)
       setStatus({
         type: 'error',
         message: 'Chyba při odesílání zprávy. Prosím zkuste později.',
@@ -108,14 +109,14 @@ const ContactsPage: FC = () => {
               <h1 className="text-4xl font-bold font-poppins contacts-title">
                 {contacts.title}
               </h1>
-              <span className="w-[78px] h-[4px] rounded-full contacts-title-underline" />
+              <span className="w-[200px] h-[4px] rounded-full contacts-title-underline" />
             </div>
 
             {/* Content grid */}
             <div className="w-full grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-20 animate-stagger">
               {/* Social links column */}
               <div className="flex flex-col gap-9 lg:col-span-2">
-                {contacts.socialLinks.map((link, index) => (
+                {contacts.socialLinks.map((link) => (
                   <a
                     key={link.label}
                     href={link.href}
@@ -141,7 +142,7 @@ const ContactsPage: FC = () => {
               <div className="flex flex-col lg:col-span-3">
                 <div className="contacts-form-card">
                 <h2 className="contacts-form-title">
-                  <FontAwesomeIcon icon={ICONS['envelope']} className="inline mr-2" />
+                  <FontAwesomeIcon icon={ICONS['envelope']} className="w-7 h-7 flex-shrink-0" />
                   {contacts.formTitle}
                 </h2>
                   <form onSubmit={handleSubmit} className="flex flex-col gap-5">

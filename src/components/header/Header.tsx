@@ -2,10 +2,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { IconProp } from "@fortawesome/fontawesome-svg-core"
 import ICONS, { type IconKey } from "@/constants/icons"
 import contentData from "@/data/content.json"
-import Navbar from "@/components/navbar/Navbar"
+import Link from "next/link"
 import "./Header.scss"
 
-const { header } = contentData
+const { header, navbar } = contentData
 
 const Header = () => (
   <header className="relative z-50 flex items-center justify-center w-full rounded-b-lg shadow-sm header-root">
@@ -18,12 +18,20 @@ const Header = () => (
           </div>
 
           {/* Navigace uprostřed - pouze na desktop */}
-          <div className="hidden md:flex flex-1 justify-center max-w-2xl mx-8">
-            <Navbar />
-          </div>
+          <nav className="hidden lg:flex items-center justify-center gap-15 space-x-8 lg:space-x-12 w-xl font-poppins text-base font-bold">
+            {navbar.navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-2xl whitespace-nowrap cursor-pointer transition-colors duration-200 navbar-link"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
 
           {/* Ikony vpravo - pouze na desktop */}
-          <div className="hidden md:flex items-center gap-6 flex-shrink-0 min-w-fit">
+          <div className="hidden lg:flex items-center gap-6 flex-shrink-0 min-w-fit">
             {header.socialLinks.map((link) => (
               <a
                 key={link.label}
@@ -39,9 +47,7 @@ const Header = () => (
           </div>
 
           {/* Mobile menu button - pouze na mobile */}
-          <div className="md:hidden">
-            <Navbar />
-          </div>
+          {/* TODO: Implementovat mobilní menu */}
         </div>
       </div>
     </header>

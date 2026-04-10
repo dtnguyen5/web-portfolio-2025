@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { IconProp } from "@fortawesome/fontawesome-svg-core"
 import Image from "next/image"
+import { FiFramer } from "react-icons/fi"
 import ICONS, { type IconKey } from "@/constants/icons"
 import contentData from "@/data/content.json"
 import "./Technologies.scss"
@@ -22,11 +23,8 @@ const Technologies = () => (
 						className="h-30 w-28 flex flex-col items-center justify-center gap-4 rounded-2xl technologies-card"
 					>
 						<div className="flex items-center justify-center h-13 w-13 rounded-full technologies-icon">
-							{tech.reactIconKey ? (
-								(() => {
-								const ReactIcon = ICONS[tech.reactIconKey as IconKey] as typeof ICONS.framer
-									return <ReactIcon className={tech.colorClass ? `technologies-icon-text ${tech.colorClass}` : "technologies-icon-text"} />
-								})()
+							{tech.reactIconKey === 'framer' ? (
+								<FiFramer className={tech.colorClass ? `technologies-icon-text ${tech.colorClass}` : "technologies-icon-text"} />
 							) : tech.iconKey ? (
 								<FontAwesomeIcon 
 								icon={ICONS[tech.iconKey as IconKey] as IconProp}

@@ -1,31 +1,6 @@
 @use "../globals.scss" as *;
 
-// Protect navbar icons from being affected by contacts page styles
-.navbar-icon-container {
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-	width: 5vw !important;
-	height: 5vh !important;
-	min-width: 5vw !important;
-	min-height: 5vh !important;
-	max-width: 5vw !important;
-	max-height: 5vh !important;
-	flex-shrink: 0 !important;
-	font-size: 5rem !important;
-	line-height: 5vh !important;
-	padding: 0 !important;
-	
-	svg {
-		width: 100% !important;
-		height: 100% !important;
-		max-width: 5vw !important;
-		max-height: 5vh !important;
-		font-size: 5rem !important;
-	}
-}
-
-// Animation keyframes
+// Animace
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -70,26 +45,26 @@
 
 // Animation utilities
 .animate-fade-in {
-  animation: fadeIn 0.8s ease-in-out forwards;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
 .animate-slide-in-left {
-  animation: slideInLeft 0.8s ease-in-out forwards;
+  animation: slideInLeft 0.8s ease-in-out;
 }
 
 .animate-slide-in-right {
-  animation: slideInRight 0.8s ease-in-out forwards;
+  animation: slideInRight 0.8s ease-in-out;
 }
 
 .animate-slide-in-up {
-  animation: slideInUp 0.8s ease-out forwards;
+  animation: slideInUp 0.8s ease-out;
 }
 
 // Staggered animations with smooth timing
 .animate-stagger {
   & > * {
     animation: slideInUp 0.8s ease-out backwards;
-    
+
     &:nth-child(1) { animation-delay: 0.1s; }
     &:nth-child(2) { animation-delay: 0.2s; }
     &:nth-child(3) { animation-delay: 0.3s; }
@@ -103,195 +78,206 @@
   }
 }
 
-// Root styling
+// Root
 .contacts-root {
-  background-color: $dark-blue;
+	background-color: $dark-blue;
 }
 
-// Title section
+// Title
 .contacts-title {
-  color: $light-blue;
+	color: $light-blue;
 }
 
 .contacts-title-underline {
-  background-color: $light-blue;
+	background-color: $light-blue;
 }
 
 // Social links
 .contacts-social-link {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 24px 28px;
-  background-color: $bila;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-  animation: slideInUp 0.6s ease-in-out backwards;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	padding: 24px 28px;
+	background-color: $bila;
+	border-radius: 20px;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 
-  &:hover {
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
-    transform: translateY(-6px);
+	&:hover {
+		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+		transform: translateY(-6px);
 
-    .contacts-arrow {
-      transform: translateX(10px);
-      color: $light-blue;
-    }
-  }
+		.contacts-arrow {
+			transform: translateX(10px);
+			color: $light-blue;
+		}
+	}
 }
 
 .contacts-social-icon {
-  width: 4vw;
-  height: 4vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba($dark-blue2, 0.15);
-  border-radius: 16px;
-  color: $light-blue;
-  font-size: 1.75rem;
-  flex-shrink: 0;
+	width: 56px;
+	height: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba($dark-blue2, 0.15);
+	border-radius: 16px;
+	color: $light-blue;
+	flex-shrink: 0;
+
+	svg {
+		width: 28px;
+		height: 28px;
+	}
 }
 
 .contacts-social-content {
-  flex: 1;
+	flex: 1;
 }
 
 .contacts-social-label {
-  font-size: 1.375rem;
-  font-weight: 700;
-  color: $dark-blue2;
-  margin: 0;
-  font-family: $poppins;
+	font-size: 1.375rem;
+	font-weight: 700;
+	color: $dark-blue2;
+	margin: 0;
+	font-family: $poppins;
 }
 
 .contacts-social-desc {
-  font-size: 0.875rem;
-  color: rgba($dark-blue2, 0.65);
-  margin: 6px 0 0 0;
+	font-size: 0.875rem;
+	color: rgba($dark-blue2, 0.65);
+	margin: 6px 0 0 0;
 }
 
 .contacts-arrow {
-  color: rgba($dark-blue2, 0.4);
-  font-size: 1.125rem;
-  transition: all 0.3s ease-in-out;
-  flex-shrink: 0;
+	color: rgba($dark-blue2, 0.4);
+	font-size: 1.125rem;
+	transition: all 0.3s ease-in-out;
+	flex-shrink: 0;
 }
 
 // Form section
 .contacts-form-card {
-  width: 100%;
-  padding: 40px 32px;
-  background-color: $bila;
-  border-radius: 24px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+	width: 100%;
+	padding: 40px 32px;
+	background-color: $bila;
+	border-radius: 24px;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
 
-  @media (max-width: 768px) {
-    padding: 32px 28px;
-  }
+	@media (max-width: 768px) {
+		padding: 32px 28px;
+	}
 }
 
 .contacts-form-title {
-  display: block;
-  width: 100%;
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: $light-blue;
-  margin: 0 0 20px 0;
-  text-align: left;
-  font-family: $poppins;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
+	max-width: 95%;
+	margin: 0 auto 20px auto;
+	font-size: 1.875rem;
+	font-weight: 700;
+	color: $light-blue;
+	font-family: $poppins;
+
+	svg {
+		width: 28px;
+		height: 28px;
+		flex-shrink: 0;
+	}
 }
 
 .contacts-label {
-  font-size: 0.9375rem;
-  font-weight: 600;
-  color: $light-blue;
-  font-family: $poppins;
+	font-size: 0.9375rem;
+	font-weight: 600;
+	color: $light-blue;
+	font-family: $poppins;
 }
 
 .contacts-input,
 .contacts-textarea {
-  width: 100%;
-  max-width: 95%;
-  margin: 0 auto;
-  display: block;
-  padding: 16px 20px;
-  background-color: #1e293b;
-  border: 1px solid rgba($light-blue, 0.15);
-  border-radius: 10px;
-  color: $light-blue;
-  font-family: $poppins;
-  font-size: 0.95rem;
-  transition: all 0.3s ease-in-out;
+	width: 100%;
+	max-width: 95%;
+	margin: 0 auto;
+	display: block;
+	padding: 16px 20px;
+	background-color: #1e293b;
+	border: 1px solid rgba($light-blue, 0.15);
+	border-radius: 10px;
+	color: $light-blue;
+	font-family: $poppins;
+	font-size: 0.95rem;
+	transition: all 0.3s ease-in-out;
 
-  &::placeholder {
-    color: $light-blue;
-  }
+	&::placeholder {
+		color: $light-blue;
+	}
 
-  &:focus {
-    outline: none;
-    border-color: $light-blue;
-    box-shadow: 0 0 0 3px rgba($light-blue, 0.12);
-  }
+	&:focus {
+		outline: none;
+		border-color: $light-blue;
+		box-shadow: 0 0 0 3px rgba($light-blue, 0.12);
+	}
 
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
 }
 
 .contacts-textarea {
-  resize: vertical;
-  min-height: 11.25vh;
+	resize: vertical;
+	min-height: 180px;
 }
 
 // Status messages
 .contacts-message-error {
-  padding: 14px 18px;
-  background-color: rgba(239, 68, 68, 0.08);
-  color: #ef4444;
-  border: 1px solid rgba(239, 68, 68, 0.25);
-  border-radius: 10px;
-  font-size: 0.875rem;
-  font-weight: 500;
+	padding: 14px 18px;
+	background-color: rgba(239, 68, 68, 0.08);
+	color: #ef4444;
+	border: 1px solid rgba(239, 68, 68, 0.25);
+	border-radius: 10px;
+	font-size: 0.875rem;
+	font-weight: 500;
 }
 
 .contacts-message-success {
-  padding: 14px 18px;
-  background-color: rgba(16, 185, 129, 0.08);
-  color: #10b981;
-  border: 1px solid rgba(16, 185, 129, 0.25);
-  border-radius: 10px;
-  font-size: 0.875rem;
-  font-weight: 500;
+	padding: 14px 18px;
+	background-color: rgba(16, 185, 129, 0.08);
+	color: #10b981;
+	border: 1px solid rgba(16, 185, 129, 0.25);
+	border-radius: 10px;
+	font-size: 0.875rem;
+	font-weight: 500;
 }
 
 // Submit button
 .contacts-submit-button {
-  width: 100%;
-  max-width: 95%;
-  margin: 20px auto 0;
-  display: block;
-  padding: 14px 32px;
-  background-color: $light-blue;
-  color: $bila;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: $poppins;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+	width: 100%;
+	max-width: 95%;
+	margin: 20px auto 0;
+	display: block;
+	padding: 14px 32px;
+	background-color: $light-blue;
+	color: $bila;
+	border: none;
+	border-radius: 10px;
+	font-size: 1rem;
+	font-weight: 700;
+	font-family: $poppins;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
 
-  &:hover:not(:disabled) {
-    background-color: #0095d3;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba($light-blue, 0.35);
-  }
+	&:hover:not(:disabled) {
+		background-color: #0095d3;
+		transform: translateY(-2px);
+		box-shadow: 0 8px 20px rgba($light-blue, 0.35);
+	}
 
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
 }

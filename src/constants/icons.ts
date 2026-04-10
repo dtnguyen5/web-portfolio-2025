@@ -14,15 +14,17 @@ import {
   faMapMarkerAlt,
   faGraduationCap,
   faEnvelope,
+  faHome,
 } from "@fortawesome/free-solid-svg-icons"
-import { FiFramer } from "react-icons/fi"
-
 const ICONS = {
   // Social
   instagram: faInstagram,
   linkedin: faLinkedinIn,
   facebook: faFacebook,
   github: faGithub,
+
+  // Nav
+  home: faHome,
 
   // Services
   desktop: faDesktop,
@@ -38,7 +40,6 @@ const ICONS = {
 
   // Technologies
   react: faReact,
-  framer: FiFramer,
 } as const
 
 export type IconKey = keyof typeof ICONS

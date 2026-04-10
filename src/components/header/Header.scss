@@ -12,8 +12,25 @@
 	color: $light-blue;
 }
 
+// Navbar links styling
+.navbar-link {
+	display: inline-block;
+	color: $dark-blue;
+	transition: color 0.3s ease;
+	cursor: pointer;
+
+	&:hover {
+		color: $light-blue;
+	}
+}
+
 .header-social-link {
 	@include simple-hover($dark-blue, $light-blue);
+
+	svg {
+		width: 28px;
+		height: 28px;
+	}
 }
 
 .Tittle {

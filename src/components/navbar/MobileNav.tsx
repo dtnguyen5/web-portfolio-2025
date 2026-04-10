@@ -1,4 +1,3 @@
-
 'use client'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -18,7 +17,7 @@ const navIconMap: Record<string, IconKey> = {
   '/contacts': 'envelope',
 }
 
-const Navbar = () => {
+const MobileNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const closeMenu = () => setIsMenuOpen(false)
@@ -26,22 +25,9 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Desktop Navigation */}
-      <nav className="hidden lg:flex items-center justify-center gap-15 space-x-8 lg:space-x-12 w-xl font-poppins text-base font-bold">
-        {navbar.navLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className="text-2xl whitespace-nowrap cursor-pointer transition-colors duration-200 navbar-link"
-          >
-            {link.label}
-          </Link>
-        ))}
-      </nav>
-
       {/* Animated Hamburger Button */}
       <button
-        className="lg:hidden p-2 navbar-menu-button"
+        className="p-2 navbar-menu-button"
         onClick={toggleMenu}
         aria-label={navbar.mobile.toggleMenuAriaLabel}
         aria-expanded={isMenuOpen}
@@ -54,7 +40,7 @@ const Navbar = () => {
       </button>
 
       {/* Mobile Dropdown — always in DOM, animated via CSS */}
-      <div className={`navbar-mobile-overlay lg:hidden${isMenuOpen ? ' is-open' : ''}`}>
+      <div className={`navbar-mobile-overlay${isMenuOpen ? ' is-open' : ''}`}>
 
         {/* Nav Items */}
         <nav className="navbar-mobile-nav">
@@ -103,4 +89,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default MobileNav

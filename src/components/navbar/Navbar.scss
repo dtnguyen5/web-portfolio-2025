@@ -1,15 +1,14 @@
 @use "../../app/globals.scss" as *;
 
-// Generování hover stylů pro všechny navbar linky
-$navbar-links: (
-	"navbar-link",
-	"navbar-mobile-link",
-	"navbar-social-link"
-);
+// Desktop navbar links - bez !important, jednoduché CSS
+.navbar-link {
+	display: inline-block;
+	color: $dark-blue;
+	transition: color 0.3s ease;
+	cursor: pointer;
 
-@each $link in $navbar-links {
-	.#{$link} {
-		@include simple-hover($dark-blue, $light-blue);
+	&:hover {
+		color: $light-blue;
 	}
 }
 
