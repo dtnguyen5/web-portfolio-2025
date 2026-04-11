@@ -130,12 +130,17 @@
 .about-profile-box {
 	background-color: $bila;
 	border-color: $light-blue;
+	
+	@media (max-width: 767px) {
+		margin-top: 4rem;
+	}
 }
 
 .about-info-icon {
 	color: $light-blue;
+	transition: all 0.3s ease-in-out;
 	
-	/* Mobil - menší ikony */
+	/* Mobile - menší ikony */
 	width: 28px !important;
 	height: 28px !important;
 	
@@ -173,20 +178,21 @@
 /* Mobile - spacing pro profil box */
 .flex-shrink-0 {
 	@media (max-width: 767px) {
-		padding-top: 2rem !important;
+		padding-top: 0 !important;
 	}
 }
 
 /* About text box styling - Desktop */
 .about-text-box {
-	padding: 32px 60px;
+	padding: 0;
 	
 	@media (max-width: 767px) {
-		padding: 24px 40px;
+		padding: 0;
 	}
 }
 
 /* About text box styling - Mobile */
 .about-text-box-mobile {
-	padding: 20px 40px;
+	padding: 0 60px;
+  padding-top: 30px;
 }

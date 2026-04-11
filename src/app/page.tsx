@@ -67,7 +67,7 @@ const HomePage = () => (
 
               <div className="h-8" />
 
-              <div className="flex gap-5">
+              <div className="flex gap-3">
                 <button className="flex items-center justify-center h-home-button-h w-home-button-w font-inter text-base lg:text-lg font-medium buttons-bold home-primary-button rounded-full transition-all duration-300 animate-slide-in-up">
                   {home.hero.primaryButton}
                 </button>
