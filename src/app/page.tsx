@@ -47,11 +47,11 @@ const HomePage = () => (
             {/* Sociální sítě a tlačítka */}
             <div className="space-y-10">
               <div className="flex flex-wrap items-center gap-y-4">
-                <span className="min-w-home-follow-label font-inter text-base sm:text-base md:text-lg lg:text-lg text-white">
+                <span className="min-w-home-follow-label font-inter text-base sm:text-base md:text-lg lg:text-lg text-white block md:inline-block w-full md:w-auto">
                   {home.hero.followText}
                 </span>
 
-                <div className="ml-6 flex items-center gap-4 animate-stagger">
+                <div className="ml-6 flex items-center gap-4 animate-stagger md:ml-6 w-full md:w-auto justify-start md:justify-start">
                   {home.socialLinks.map((link) => (
                     <a
                       key={link.label}

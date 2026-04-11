@@ -7,11 +7,11 @@ import "./Nabidky.scss"
 const { nabidky } = contentData
 
 const Nabidky = () => (
-  <div className="flex flex-col items-center justify-center gap-20 md:flex-row">
+  <div className="flex flex-col items-center justify-center gap-8 md:gap-20 md:flex-row">
     {nabidky.cards.map((card) => (
       <div
         key={card.title}
-        className="flex flex-col items-center justify-center gap-7 h-[35vh] w-[30vw] rounded-[10%] nabidky-card"
+        className="flex flex-col items-center justify-center gap-5 md:gap-7 h-[40vh] w-[90vw] sm:h-[35vh] sm:w-[70vw] md:h-[35vh] md:w-[30vw] rounded-[10%] nabidky-card pt-8 pl-4 sm:pt-8 sm:pl-4 md:pt-0 md:pl-0"
       >
         <div className="flex flex-row items-center gap-7 w-[80%]">
           <div className="flex items-center justify-center h-16 w-16 rounded-full nabidky-icon-wrap">
