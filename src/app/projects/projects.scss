@@ -132,9 +132,9 @@
 	transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 	display: flex;
 	flex-direction: column;
-	min-height: 350px;
+	min-height: 35vh;
 	md: {
-		min-height: 380px;
+		min-height: 38vh;
 	}
 
 	&:hover {
@@ -148,7 +148,7 @@
 .project-card-content {
 	flex: 1;
 	background-color: #f5f5f5;
-	min-height: 260px;
+	min-height: 26vh;
 	position: relative;
 	overflow: hidden;
 }
