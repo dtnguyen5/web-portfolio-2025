@@ -78,9 +78,9 @@
       "greeting": "Ahoj, jsem",
       "name": "Nguyen Duy Tiep",
       "wave": "👋",
-      "rolePrimary": "Front-end developer",
+      "rolePrimary":"UI/UX designer",
       "roleConnector": " & ",
-      "roleSecondary": "UI/UX designer",
+      "roleSecondary": "Front-end developer",
       "descriptionLine1": "Zde najdete ukázky mých webových projektů. Tvořím moderní",
       "descriptionLine2": "a funkční weby – podívejte se na mé práce a ozvěte se pro spolupráci!",
       "followText": "Sledujte mě na:",
@@ -131,7 +131,7 @@
     ],
     "title": "O mně",
     "paragraphs": [
-      "Jsem webový vývojář z Plzně a specializuji se na tvorbu moderních, funkčních a snadno udržovatelných webových stránek. Weby vytvářím v Reactu, TypeScriptu, TailwindCSS a SCSS. Díky těmto technologiím tvořím rychlé, dynamické a škálovatelné projekty, které dobře vypadají a snadno se upravují podle potřeby klienta.",
+      "Jsem webový designér a vývojář z Plzně, který se zaměřuje na tvorbu moderních a uživatelsky orientovaných webových řešení. Mým cílem je pomoci vám přetavit vaše myšlenky do podoby moderního webu.",
       "Zakládám si na přehlednosti, responzivitě a vizuální atraktivitě. Sleduji aktuální trendy a neustále rozvíjím své dovednosti, abych svým klientům poskytoval moderní a efektivní řešení."
     ],
     "offersTitle": "Co Vám mohu nabídnout ?"
@@ -146,7 +146,7 @@
       {
         "title": "Tvorba webu",
         "iconKey": "code",
-        "text": "Vytvářím plně funkční a responzivní webové stránky s využitím moderních technologií jako React, TailwindCSS a TypeScript. Dbám na čistý kód, škálovatelnost a snadnou správu. Výsledkem je rychlý web připravený na budoucí rozšíření."
+        "text": "Vytvářím moderní a esteticky promyšlené návrhy webových stránek, které dobře vypadají a přesně odpovídají požadavkům vaší cílové skupiny. Důraz kladu na přehlednost, uživatelskou přívětivost a jasnou vizuální identitu vaší značky."
       },
       {
         "title": "Optimalizace webu",
@@ -206,8 +206,8 @@
         "colorClass": "icon-white"
       },
       {
-        "label": "Blender",
-        "image": "/Blender.svg"
+        "label": "Affinity",
+        "image": "/Affinity_Logo.svg"
       }
     ]
   },
@@ -252,18 +252,35 @@
   },
   "projects": {
     "title": "Projekty",
-    "placeholders": [
+    "items": [
       {
-        "id": "project-1"
-      },
-      {
-        "id": "project-2"
-      },
-      {
-        "id": "project-3"
-      },
-      {
-        "id": "project-4"
+        "id": "project-1",
+        "client": "Jakub Zadamsky",
+        "image": "/jakub.png",
+        "tags": ["Trenér", "Fitness", "Portfolio"],
+        "year": "2026",
+        "role": "UI/UX Designer",
+        "livePreview": "https://zadyfit.com/",
+        "intro": "Během své odborné praxe ve studiu Groovia jsem se stal součástí týmu a dostal příležitost pracovat na reálném projektu pro zahraničního klienta. Mým hlavním úkolem byla kompletní tvorba webu v nástroji Framer, kde jsem mohl naplno uplatnit své zkušenosti s designem a prací s vizuální identitou. Od prvního dne jsem postupoval podle profesionální strategie, která jasně definovala cíle a potřeby klienta, což mi umožnilo se plně soustředit na precizní výsledek. Tahle zkušenost pro mě byla klíčová, protože mi potvrdila, že profesionální tvorba webu není jen o vizuálu, ale o schopnosti porozumět zadání a přetavit ho do funkčního digitálního řešení. Celá spolupráce probíhala v naprosté transparentnosti a s přátelským přístupem týmu, díky čemuž jsem se rychle adaptoval na vysoké pracovní tempo a získal praktický vhled do fungování moderního studia.",
+        "goals": [
+          {
+            "number": 1,
+            "title": "Důkladná revize stávajícího webu, identifikace jeho slabých míst a návrh efektivnějšího řešení.",
+            "description": "Na začátku jsem se podíval na stávající web, abych zjistil, co návštěvníky zbytečně brzdí nebo odvádí jinam. Následně jsem prošel řadu inspirativních stránek, porovnal různé přístupy a hledal způsob, jak web posunout na vyšší úroveň. Cílem bylo vytvořit čistý a přehledný prostor bez rušivých prvků, kde veškerá tvorba vynikne v profesionálním kontextu a návštěvníci se v ní budou cítit příjemně."
+          },
+          {
+            "number": 2,
+            "title": "Vytvořit prémiovou prezentaci, která okamžitě odráží kvalitu jeho práce.",
+            "description": "Na základě analýzy jsem ve Figmě vytvořil wireframe, abych webu dodal jasnou a čistou strukturu. Mým cílem bylo nahradit původní, neuspořádaný styl moderním základem, který působí přehledně a profesionálně."
+          },
+          {
+            "number": 3,
+            "title": "Převést strukturu z wireframů do finální podoby v nástroji Framer.",
+            "description": "Po dokončení wireframů ve Figmě jsem se pustil do samotného designu a vývoje přímo ve Frameru. Díky předem promyšlené struktuře šla tvorba hladce a mohl jsem se soustředit na vyladění každého detailu. Cílem bylo vytvořit živou a interaktivní prezentaci, která není jen hezká na pohled, ale skvěle funguje na jakémkoliv zařízení. Výsledkem je profesionální web, který v očích klientů posouvá Jakubovu tvorbu na zcela novou úroveň."
+          }
+        ],
+        "tools": ["Figma", "Framer"],
+        "conclusion": "Odborná praxe v designovém studiu Groovia pro mě byla mimořádně přínosnou zkušeností, která předčila má původní očekávání. Díky tomu, že mi byla svěřena reálná zakázka pro zahraničního klienta, jsem si mohl vyzkoušet celý proces tvorby webu – od přípravy struktury ve Figmě až po finální realizaci ve Frameru. Kromě technických dovedností jsem získal cenný vhled do fungování moderního studia v mezinárodním prostředí, což mi pomohlo překonat počáteční nejistotu a zdokonalit se v profesní komunikaci. Jsem velmi vděčný za důvěru, kterou do mě zakladatel studia vložil, i za přátelskou atmosféru, která panovala v celém týmu. Tato zkušenost mi potvrdila, že se vydávám správným směrem, a nabídka budoucí spolupráce po maturitě je pro mě tou nejlepší motivací pro další rozvoj. Získané poznatky nyní plánuji naplno využít při své další tvorbě a studiu."
       }
     ]
   },
@@ -273,10 +290,10 @@
       "secondary": "Duy Tiep"
     },
     "descriptionLines": [
-      "Front-end developer se specializací na UI/UX,",
-      "moderní webové technologie a tvorbu plynulých",
-      "digitálních zážitků s čistým kódem a kreativním",
-      "tokem."
+      "UI/UX designer a front-end vývojář",
+      "se specializací na moderní digitální design,",
+      "tvorbu působivých uživatelských rozhraní",
+      "a esteticky čistých webových zážitků."
     ],
     "navigationHeading": "Navigace",
     "navigationLinks": [

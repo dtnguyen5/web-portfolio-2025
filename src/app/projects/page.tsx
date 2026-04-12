@@ -1,10 +1,11 @@
 import Header from "@/components/header/Header"
 import Footer from "@/components/footer/Footer"
+import Link from "next/link"
+import Image from "next/image"
 import contentData from "@/data/content.json"
 import "./projects.scss"
 
 const { projects } = contentData
-const PROJECT_PLACEHOLDERS = projects.placeholders
 
 const ProjectsPage = () => (
   <div className="min-h-screen w-full flex flex-col projects-root" lang="cs">
@@ -19,15 +20,32 @@ const ProjectsPage = () => (
           </div>
 
           <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 lg:gap-x-20 lg:gap-y-20 animate-stagger">
-            {PROJECT_PLACEHOLDERS.map((project) => (
-              <article
-                key={project.id}
-                className="h-[255px] md:h-[272px] rounded-[24px] overflow-hidden project-placeholder-card"
-                aria-label="Placeholder projektu"
-              >
-                <div className="h-[50%] project-placeholder-top" />
-                <div className="h-[54%] project-placeholder-bottom" />
-              </article>
+            {projects.items.map((project) => (
+              <Link key={project.id} href={`/projects/${project.id}`}>
+                <article
+                  className="rounded-[24px] overflow-hidden project-card group cursor-pointer"
+                  aria-label={`Projekt od ${project.client}`}
+                >
+                  <div className="project-card-content">
+                    {project.image && (
+                      <Image
+                        src={project.image}
+                        alt={`Projekt pro ${project.client}`}
+                        fill
+                        className="object-cover"
+                        priority={true}
+                      />
+                    )}
+                  </div>
+                  <div className="project-card-footer">
+                    <div className="project-card-footer-divider" />
+                    <div className="flex flex-col">
+                      <p className="text-[13px] font-poppins project-card-label">Klient</p>
+                      <p className="text-lg md:text-xl font-bold font-poppins text-white">{project.client}</p>
+                    </div>
+                  </div>
+                </article>
+              </Link>
             ))}
           </div>
         </div>

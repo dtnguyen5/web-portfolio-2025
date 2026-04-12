@@ -1,4 +1,5 @@
 import Header from "@/components/header/Header"
+import Image from "next/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { IconProp } from "@fortawesome/fontawesome-svg-core"
 import ICONS from "@/constants/icons"
@@ -80,7 +81,15 @@ const HomePage = () => (
 
           {/* Right Content - Profile Image */}
           <div className="flex justify-center lg:items-center lg:pr-12 xl:pr-24 h-full">
-            <div className="relative h-home-profile-h w-home-profile-w overflow-hidden border-4 rounded-full home-profile-ring"></div>
+            <div className="relative h-home-profile-h w-home-profile-w overflow-hidden border-4 rounded-full home-profile-ring">
+              <Image 
+                src="/nguyen.jpg" 
+                alt="Nguyen Duy Tiep" 
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>

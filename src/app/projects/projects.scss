@@ -126,6 +126,54 @@
 	background-color: $dark-blue;
 }
 
+.project-card {
+	background-color: $dark-blue;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+	transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	min-height: 350px;
+	md: {
+		min-height: 380px;
+	}
+
+	&:hover {
+		box-shadow:
+			0 30px 60px rgba(0, 0, 0, 0.4),
+			0 0 20px rgba(100, 200, 255, 0.2);
+		transform: translateY(-4px);
+	}
+}
+
+.project-card-content {
+	flex: 1;
+	background-color: #f5f5f5;
+	min-height: 260px;
+	position: relative;
+	overflow: hidden;
+}
+
+.project-card-footer {
+	background-color: $dark-blue;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	border-top: 1px solid rgba($light-blue, 0.15);
+}
+
+.project-card-footer-divider {
+	width: 60px;
+	height: 3px;
+	background-color: $light-blue;
+	border-radius: 10px;
+}
+
+.project-card-label {
+	color: rgba($light-blue, 0.7);
+	font-weight: 500;
+}
+
 @include responsive(tablet) {
 	.projects-title {
 		font-size: 2.0625rem;

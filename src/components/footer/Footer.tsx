@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { IconProp } from "@fortawesome/fontawesome-svg-core"
 import ICONS, { type IconKey } from "@/constants/icons"
@@ -33,7 +34,7 @@ const Footer = () => {
           {/* Navigace */}
           <div className="footer-column">
             <h4 className="footer-heading">
-              <FontAwesomeIcon icon={ICONS.desktop} className="footer-heading-icon" />
+              <Image src="/paper-plane-solid-full.svg" alt="Navigace" width={20} height={20} className="footer-heading-icon" />
               {footer.navigationHeading}
             </h4>
             <nav className="footer-nav">
@@ -48,7 +49,7 @@ const Footer = () => {
           {/* Sociální sítě */}
           <div className="footer-column">
             <h4 className="footer-heading">
-              <FontAwesomeIcon icon={ICONS.code} className="footer-heading-icon" />
+              <Image src="/share-nodes-solid-full.svg" alt="Sociální sítě" width={20} height={20} className="footer-heading-icon" />
               {footer.socialHeading}
             </h4>
             <div className="footer-social">
@@ -70,11 +71,11 @@ const Footer = () => {
             <h4 className="footer-heading">{footer.contactsHeading}</h4>
             <div className="footer-contacts">
               <a href={footer.contacts.phoneHref} className="footer-contact-link">
-                <FontAwesomeIcon icon={ICONS.desktop} className="footer-contact-icon" />
+                <Image src="/phone-solid-full.svg" alt="Telefon" width={24} height={24} className="footer-contact-icon" />
                 {footer.contacts.phone}
               </a>
               <a href={footer.contacts.emailHref} className="footer-contact-link">
-                <FontAwesomeIcon icon={ICONS.code} className="footer-contact-icon" />
+                <Image src="/envelope-solid-full.svg" alt="Email" width={24} height={24} className="footer-contact-icon" />
                 {footer.contacts.email}
               </a>
             </div>

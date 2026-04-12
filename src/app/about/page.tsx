@@ -4,6 +4,7 @@ import Nabidky from "@/components/nabidky/Nabidky"
 import Technologies from "@/components/technologies/Technologies"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { IconProp } from "@fortawesome/fontawesome-svg-core"
+import Image from "next/image"
 import ICONS from "@/constants/icons"
 import contentData from "@/data/content.json"
 import "./about.scss"
@@ -22,13 +23,24 @@ const AboutPage = () => (
 
             {/* Profile */}
             <div className="flex-shrink-0 flex flex-col items-center justify-center w-full md:w-auto">
-              <div className="w-[200px] h-[200px] md:w-[340px] md:h-[340px] about-profile-box rounded-[40px] border-4"></div>
+              <div className="w-[200px] h-[200px] md:w-[340px] md:h-[340px] about-profile-box rounded-[40px] border-4 relative overflow-hidden">
+                <Image 
+                  src="/nguyen.jpg" 
+                  alt="Nguyen Duy Tiep" 
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
 
             {/* Info items */}
             <div className="flex flex-col gap-6 md:gap-10 min-w-[260px] animate-stagger w-full md:w-auto">
               {/* Mobil - Nadpis "O mně" nad info items */}
-              <h2 className="md:hidden about-section-title text-2xl font-bold font-poppins text-center w-full">{about.title}</h2>
+              <div className="md:hidden flex flex-col gap-2 items-center w-full">
+                <h2 className="about-section-title text-2xl font-bold font-poppins text-center">{about.title}</h2>
+                <div className="w-[220px] h-[7px] about-section-underline rounded-full"></div>
+              </div>
 
               {about.infoItems.map((item) => (
                 <div key={item.text} className="flex items-center gap-4 md:gap-6 md:ml-0" style={{ marginLeft: "60px" }}>
@@ -71,11 +83,13 @@ const AboutPage = () => (
         </div>
 
         {/* Section 2 - Co Vám mohu nabídnout */}
-        <div className="w-full h-[70vh] flex justify-center items-center">
-          <div className="w-[82vw] h-[70vh] flex flex-col gap-17">
-            <div className="w-full flex flex-col gap-7 animate-slide-in-up">
-              <h2 className="about-section-title text-4xl font-bold font-poppins">{about.offersTitle}</h2>
-              <div className="w-[125px] h-[7px] about-section-underline rounded-r-lg"></div>
+        <div className="w-full flex justify-center items-center py-12 md:py-0 md:h-[70vh]">
+          <div className="w-full px-4 md:px-0 md:w-[82vw] h-auto md:h-[70vh] flex flex-col gap-7 md:gap-17">
+            <div className="w-full flex flex-col gap-7 animate-slide-in-up md:gap-7">
+              <div className="flex flex-col justify-center items-center gap-1 md:gap-7">
+                <h2 className="about-section-title text-left text-2xl md:text-4xl font-bold font-poppins">{about.offersTitle}</h2>
+                <div className="w-[125px] h-[7px] about-section-underline rounded-full"></div>
+              </div>
             </div>
             <div>
               <Nabidky />

@@ -95,12 +95,14 @@
 	width: 45px;
 	height: 45px;
 	border-radius: 50%;
+	color: $light-blue;
 	@include hover-colors($light-blue, $bila, $dark-blue, $light-blue);
 	transition: all 0.3s ease;
 
 	svg {
 		width: 20px;
 		height: 20px;
+		fill: $light-blue;
 	}
 }
 
@@ -122,9 +124,8 @@
 }
 
 .footer-contact-icon {
-	color: $light-blue;
-	width: 18px;
-	height: 18px;
+	width: 24px;
+	height: 24px;
 }
 
 // Copyright
