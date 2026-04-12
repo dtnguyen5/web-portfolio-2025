@@ -206,7 +206,7 @@
 	background-color: #1e293b;
 	border: 1px solid rgba($light-blue, 0.15);
 	border-radius: 10px;
-	color: $light-blue;
+	color: #ffffff !important;
 	font-family: $poppins;
 	font-size: 0.95rem;
 	transition: all 0.3s ease-in-out;
@@ -225,6 +225,12 @@
 		opacity: 0.5;
 		cursor: not-allowed;
 	}
+}
+
+/* WebKit autofill styling */
+.contacts-input:-webkit-autofill,
+.contacts-textarea:-webkit-autofill {
+	-webkit-text-fill-color: #ffffff !important;
 }
 
 .contacts-textarea {
