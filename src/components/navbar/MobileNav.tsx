@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useTransition } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import ICONS, { type IconKey } from '@/constants/icons'
@@ -19,9 +19,16 @@ const navIconMap: Record<string, IconKey> = {
 
 const MobileNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [, startTransition] = useTransition()
 
   const closeMenu = () => setIsMenuOpen(false)
   const toggleMenu = () => setIsMenuOpen((prev) => !prev)
+  
+  const handleNavClick = (href: string) => {
+    startTransition(() => {
+      closeMenu()
+    })
+  }
 
   return (
     <>
@@ -51,7 +58,7 @@ const MobileNav = () => {
                 key={link.href}
                 href={link.href}
                 className="navbar-mobile-item"
-                onClick={closeMenu}
+                onClick={() => handleNavClick(link.href)}
               >
                 <span className="navbar-mobile-item-icon">
                   {iconKey && (

@@ -13,10 +13,10 @@ const Header = () => (
     <div className="w-[90%] px-4 sm:px-6 lg:px-8">
       <div className="flex items-center justify-around w-full h-20">
           {/* Logo vlevo */}
-          <div className="flex-shrink-0 min-w-fit font-poppins text-xl font-semibold">
+          <Link href="/" className="flex-shrink-0 min-w-fit font-poppins text-xl font-semibold">
             <span className="text-2xl font-bold cursor-pointer header-logo-primary">{header.logo.primary} </span>
             <span className="text-2xl font-bold cursor-pointer header-logo-secondary">{header.logo.secondary}</span>
-          </div>
+          </Link>
 
           {/* Navigace uprostřed - pouze na desktop */}
           <nav className="hidden lg:flex items-center justify-center gap-15 space-x-8 lg:space-x-12 w-xl font-poppins text-base font-bold">

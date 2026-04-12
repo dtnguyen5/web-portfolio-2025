@@ -1,5 +1,6 @@
 import Header from "@/components/header/Header"
 import Image from "next/image"
+import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { IconProp } from "@fortawesome/fontawesome-svg-core"
 import ICONS from "@/constants/icons"
@@ -57,6 +58,8 @@ const HomePage = () => (
                     <a
                       key={link.label}
                       href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center justify-center p-5 h-10 w-10 home-social-button rounded-full transition-all duration-300 animate-pulse-glow"
                       aria-label={link.label}
                     >
@@ -69,12 +72,12 @@ const HomePage = () => (
               <div className="h-8" />
 
               <div className="flex gap-3">
-                <button className="flex items-center justify-center h-home-button-h w-home-button-w font-inter text-base lg:text-lg font-medium buttons-bold home-primary-button rounded-full transition-all duration-300 animate-slide-in-up">
+                <Link href="/about" className="flex items-center justify-center h-home-button-h w-home-button-w font-inter text-base lg:text-lg font-medium buttons-bold home-primary-button rounded-full transition-all duration-300 animate-slide-in-up">
                   {home.hero.primaryButton}
-                </button>
-                <button className="flex items-center justify-center h-home-button-h w-home-button-w border-2 font-inter text-base lg:text-lg font-medium buttons-bold home-secondary-button rounded-full transition-all duration-300 animate-slide-in-up">
+                </Link>
+                <Link href="/contacts" className="flex items-center justify-center h-home-button-h w-home-button-w border-2 font-inter text-base lg:text-lg font-medium buttons-bold home-secondary-button rounded-full transition-all duration-300 animate-slide-in-up">
                   {home.hero.secondaryButton}
-                </button>
+                </Link>
               </div>
             </div>
           </div>
