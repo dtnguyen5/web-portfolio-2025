@@ -39,3 +39,46 @@
 		font-family: $poppins;
 	}
 }
+
+/* Tablet Responsive Styles (medium screens) */
+@media (min-width: 769px) and (max-width: 1024px) {
+	.header-root > div {
+		width: 85% !important;
+	}
+
+	.header-root > div > div {
+		justify-content: space-between !important;
+	}
+}
+
+/* MacBook/Medium Desktop Styles */
+@media (min-width: 1025px) and (max-width: 1200px) {
+	.header-root > div > div {
+		gap: 8px !important;
+	}
+
+	.header-root > div > div > a {
+		font-size: 1.25rem !important;
+	}
+
+	.header-root > div > div > a span {
+		font-size: 1.25rem !important;
+	}
+
+	.header-root nav {
+		gap: 32px !important;
+	}
+
+	.header-root nav a {
+		font-size: 1.125rem !important;
+	}
+
+	.header-root > div > div > div:last-child {
+		gap: 4px !important;
+	}
+
+	.header-root > div > div > div:last-child svg {
+		width: 12px !important;
+		height: 12px !important;
+	}
+}

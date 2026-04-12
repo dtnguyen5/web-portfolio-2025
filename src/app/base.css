@@ -16,6 +16,17 @@
   --spacing-home-profile-w: 404px;
 }
 
+/* Tablet overrides (medium screens) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  :root {
+    --spacing-home-profile-h: 340px;
+    --spacing-home-profile-w: 340px;
+    --spacing-home-button-h: 50px;
+    --spacing-home-button-w: 160px;
+    --spacing-home-follow-label: 130px;
+  }
+}
+
 /* Mobile overrides */
 @media (max-width: 768px) {
   :root {

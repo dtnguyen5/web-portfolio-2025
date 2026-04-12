@@ -193,6 +193,30 @@
 
 /* About text box styling - Mobile */
 .about-text-box-mobile {
-	padding: 0 60px;
+	padding: 0;
   padding-top: 30px;
+}
+
+/* Tablet/MacBook responsive sizing - between mobile and desktop */
+@media (min-width: 768px) and (max-width: 1024px) {
+	/* Profile box smaller on tablet */
+	.about-profile-box {
+		width: 280px !important;
+		height: 280px !important;
+	}
+
+	/* Info items text size on tablet */
+	.about-info-text {
+		font-size: 1rem !important;
+	}
+
+	/* About title on tablet */
+	.about-section-title {
+		font-size: 1.8rem !important;
+	}
+
+	/* About body text on tablet */
+	.about-body-text {
+		font-size: 0.95rem !important;
+	}
 }

@@ -250,3 +250,134 @@ $button-variants: (
     margin-top: 20px;
   }
 }
+
+/* Tablet Responsive Styles (medium screens) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .home-section {
+    padding: 0 !important;
+    padding-top: 40px !important;
+  }
+
+  .home-section > div {
+    padding: 0;
+  }
+
+  .home-section .grid {
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .home-section .grid > div:first-child {
+    width: 100% !important;
+    max-width: 100%;
+    padding-left: 40px !important;
+    padding-right: 20px;
+  }
+
+  .home-section .grid > div:last-child {
+    padding-left: 20px;
+    padding-right: 40px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-section h1 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .home-section h1 span.inline-block {
+    white-space: nowrap;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  .home-section h2 {
+    font-size: 1rem !important;
+    text-align: left;
+  }
+
+  .home-section p {
+    font-size: 0.95rem !important;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .home-section .flex.flex-wrap.items-center {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px !important;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .home-section .flex.flex-wrap.items-center .ml-6 {
+    margin-left: 0 !important;
+  }
+
+  .home-section .space-y-10 {
+    gap: 20px !important;
+  }
+
+  .home-section .flex.gap-3 {
+    gap: 16px !important;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .home-profile-ring {
+    margin-top: 0;
+  }
+}
+
+/* MacBook/Medium Desktop Styles */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .home-section h1 {
+    font-size: 1.875rem !important;
+    line-height: 1.3;
+  }
+
+  .home-section h1 span.inline-block {
+    white-space: nowrap;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  .home-section h2 {
+    font-size: 1.125rem !important;
+  }
+
+  .home-section p {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Large Desktop Styles - iPad/Laptop */
+@media (min-width: 1201px) and (max-width: 1440px) {
+  .home-section h1 {
+    font-size: 2.4rem !important;
+    line-height: 1.2;
+  }
+
+  .home-section h1 span.inline-block {
+    white-space: nowrap;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  .home-section h2 {
+    font-size: 1rem !important;
+  }
+
+  .home-section p {
+    font-size: 0.9rem !important;
+  }
+
+  .home-section > div > div > div:first-child > div:nth-child(2) {
+    margin-top: 8px !important;
+  }
+}
