@@ -20,6 +20,10 @@ $icon-colors: (
 
 .technologies-root {
 	background-color: $dark-blue;
+	
+	@media (max-width: 640px) {
+		margin-top: 60px;
+	}
 }
 
 .technologies-panel {
@@ -89,4 +93,43 @@ $icon-colors: (
 .technologies-label {
 	color: $bila;
 	font-family: $poppins;
+}
+
+/* Mobile responsive - 3 sloupce a lepší spacing */
+@media (max-width: 640px) {
+	.technologies-panel {
+		width: 100% !important;
+		height: auto !important;
+		min-height: 700px !important;
+		padding: 30px 16px !important;
+		gap: 40px !important;
+
+		> div:last-child {
+			width: 100% !important;
+			grid-template-columns: repeat(3, 1fr) !important;
+			gap: 16px !important;
+		}
+	}
+
+	.technologies-card {
+		width: 100% !important;
+		height: auto !important;
+		padding: 16px 8px !important;
+		gap: 12px !important;
+	}
+
+	.technologies-icon {
+		width: 56px !important;
+		height: 56px !important;
+	}
+
+	.technologies-icon-text {
+		font-size: 20px !important;
+		width: 26px !important;
+		height: 26px !important;
+	}
+
+	.technologies-label {
+		font-size: 12px !important;
+	}
 }

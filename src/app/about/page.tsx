@@ -86,7 +86,7 @@ const AboutPage = () => (
         <div className="w-full flex justify-center items-center py-12 md:py-0 md:h-[70vh]">
           <div className="w-full px-4 md:px-0 md:w-[82vw] h-auto md:h-[70vh] flex flex-col gap-7 md:gap-17">
             <div className="w-full flex flex-col gap-7 animate-slide-in-up md:gap-7">
-              <div className="flex flex-col justify-center items-center gap-1 md:gap-7">
+              <div className="flex flex-col justify-center items-center gap-3 md:gap-7 title-section">
                 <h2 className="about-section-title text-left text-2xl md:text-4xl font-bold font-poppins">{about.offersTitle}</h2>
                 <div className="w-[125px] h-[7px] about-section-underline rounded-full"></div>
               </div>
@@ -98,7 +98,7 @@ const AboutPage = () => (
         </div>
 
         {/* Section 3 - Technologie */}
-        <div className="w-full h-[80vh] flex justify-center items-center">
+        <div className="w-full h-[80vh] flex justify-center items-center technologies-section">
           <div className="w-[90vw]">
             <Technologies />
           </div>

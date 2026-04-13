@@ -1,6 +1,7 @@
 
 'use client'
 import { useState, useTransition } from 'react'
+import { usePathname } from 'next/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import ICONS, { type IconKey } from '@/constants/icons'
@@ -19,6 +20,7 @@ const navIconMap: Record<string, IconKey> = {
 }
 
 const Navbar = () => {
+  const pathname = usePathname()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [, startTransition] = useTransition()
 
@@ -31,6 +33,13 @@ const Navbar = () => {
     })
   }
 
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return pathname === '/'
+    }
+    return pathname.startsWith(href)
+  }
+
   return (
     <>
       {/* Desktop Navigation */}
@@ -39,7 +48,7 @@ const Navbar = () => {
           <Link
             key={link.href}
             href={link.href}
-            className="text-2xl whitespace-nowrap cursor-pointer transition-colors duration-200 navbar-link"
+            className={`text-2xl whitespace-nowrap cursor-pointer transition-colors duration-200 navbar-link ${isActive(link.href) ? 'navbar-link-active' : ''}`}
           >
             {link.label}
           </Link>
@@ -67,11 +76,12 @@ const Navbar = () => {
         <nav className="navbar-mobile-nav">
           {navbar.navLinks.map((link) => {
             const iconKey = navIconMap[link.href] as IconKey | undefined
+            const active = isActive(link.href)
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className="navbar-mobile-item"
+                className={`navbar-mobile-item${active ? ' navbar-mobile-item-active' : ''}`}
                 onClick={handleNavClick}
               >
                 <span className="navbar-mobile-item-icon">

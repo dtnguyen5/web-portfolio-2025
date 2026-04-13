@@ -10,6 +10,10 @@
 	&:hover {
 		color: $light-blue;
 	}
+
+	&.navbar-link-active {
+		color: $light-blue;
+	}
 }
 
 .navbar-menu-button {
@@ -116,6 +120,16 @@
 
 		.navbar-mobile-item-icon {
 			background-color: rgba($light-blue, 0.15);
+			color: $light-blue;
+		}
+	}
+
+	&.navbar-mobile-item-active {
+		background-color: rgba($light-blue, 0.2);
+		color: $light-blue;
+
+		.navbar-mobile-item-icon {
+			background-color: rgba($light-blue, 0.25);
 			color: $light-blue;
 		}
 	}

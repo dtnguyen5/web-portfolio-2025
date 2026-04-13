@@ -19,3 +19,44 @@
 .nabidky-card-text {
 	color: $bila;
 }
+
+/* Mobile - větší gap mezi nadpisem a kartami */
+@media (max-width: 640px) {
+	.flex.flex-col.items-center.justify-center.gap-8 {
+		gap: 60px !important;
+	}
+}
+
+/* Tablet - zmenšení boxů */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.flex.flex-col.items-center.justify-center.gap-8 {
+		gap: 15px !important;
+	}
+
+	.nabidky-card {
+		height: 170px !important;
+		padding: 10px !important;
+		gap: 22px !important;
+	}
+
+	.nabidky-card h3 {
+		font-size: 0.85rem !important;
+	}
+
+	.nabidky-card-text {
+		font-size: 0.55rem !important;
+		line-height: 1.2 !important;
+	}
+
+	.nabidky-icon-wrap {
+		width: 28px !important;
+		height: 28px !important;
+		flex-shrink: 0;
+	}
+
+	.nabidky-icon-wrap svg {
+		font-size: 12px !important;
+		width: 12px !important;
+		height: 12px !important;
+	}
+}
