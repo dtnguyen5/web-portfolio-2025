@@ -9,7 +9,7 @@ import "./Header.scss"
 const { header, navbar } = contentData
 
 const Header = () => (
-  <header className="relative z-50 flex items-center justify-center w-full rounded-b-lg shadow-sm header-root">
+  <header className="sticky top-0 z-50 flex items-center justify-center w-full rounded-b-lg shadow-sm header-root">
     <div className="w-[90%] px-4 sm:px-6 lg:px-8">
       <div className="flex items-center justify-around w-full h-20">
           {/* Logo vlevo */}
