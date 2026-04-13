@@ -13,7 +13,7 @@ const HomePage = () => (
   <div className="min-h-screen w-full home-root">
     <Header />
     <section
-      className="flex items-center justify-center py-8 md:py-16 home-section"
+      className="flex items-center justify-center py-8 md:py-10 home-section"
       style={{ minHeight: "calc(100vh - 120px)" }}
     >
       <div className="w-full px-8 lg:px-16 xl:px-24">
@@ -47,7 +47,7 @@ const HomePage = () => (
             <div className="h-2" />
 
             {/* Sociální sítě a tlačítka */}
-            <div className="space-y-10">
+            <div className="space-y-6 md:space-y-8">
               <div className="flex flex-wrap items-center gap-y-4">
                 <span className="min-w-home-follow-label font-inter text-base sm:text-base md:text-lg lg:text-lg text-white block md:inline-block w-full md:w-auto">
                   {home.hero.followText}

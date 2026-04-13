@@ -10,7 +10,7 @@ const { technologies } = contentData
 
 const Technologies = () => (
 	<section className="flex items-center justify-center w-full technologies-root">
-		<div className="w-[81.5vw] h-[70vh] flex flex-col justify-center items-center gap-20 px-6 py-10 md:py-14 technologies-panel">
+		<div className="w-[81.5vw] h-[70vh] flex flex-col justify-center items-center gap-20 px-6 py-3 sm:py-6 md:py-8 technologies-panel">
 			<div className="flex flex-col items-center gap-3">
 				<h2 className="text-3xl font-bold technologies-title">{technologies.title}</h2>
 				<span className="technologies-underline" />

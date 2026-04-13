@@ -102,7 +102,7 @@ const ContactsPage: FC = () => {
 
       {/* Main content */}
       <main className="flex-1">
-        <section className="w-full flex justify-center pb-12 md:pb-16 lg:pb-20" style={{paddingTop: '60px'}}>
+        <section className="w-full flex justify-center pb-8 md:pb-12 lg:pb-14" style={{paddingTop: '60px'}}>
           <div className="w-[92%] max-w-[1250px] flex flex-col items-center gap-12 md:gap-14">
             {/* Title */}
             <div className="w-full flex flex-col items-center gap-3 mt-20 animate-slide-in-up">
@@ -113,7 +113,7 @@ const ContactsPage: FC = () => {
             </div>
 
             {/* Content grid */}
-            <div className="w-full grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-20 animate-stagger">
+            <div className="w-full grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-12 animate-stagger">
               {/* Social links column */}
               <div className="flex flex-col gap-9 lg:col-span-2">
                 {contacts.socialLinks.map((link) => (

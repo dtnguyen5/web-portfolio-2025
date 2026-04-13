@@ -19,7 +19,7 @@ const AboutPage = () => (
       <div className="flex-1">
         {/* Section 1 - O mně */}
         <div className="w-full flex flex-col md:h-[80vh] justify-center items-center py-16 md:py-0">
-          <div className="w-full px-4 md:px-0 md:w-[90vw] h-auto md:h-[60vh] flex flex-col md:flex-row items-center md:justify-around gap-8 md:gap-12 animate-stagger">
+          <div className="w-full px-4 md:px-0 md:w-[90vw] h-auto md:h-[60vh] flex flex-col md:flex-row items-center md:justify-around gap-6 md:gap-8 animate-stagger">
 
             {/* Profile */}
             <div className="flex-shrink-0 flex flex-col items-center justify-center w-full md:w-auto">
@@ -35,7 +35,7 @@ const AboutPage = () => (
             </div>
 
             {/* Info items */}
-            <div className="flex flex-col gap-6 md:gap-10 min-w-[260px] animate-stagger w-full md:w-auto">
+            <div className="flex flex-col gap-6 md:gap-7 min-w-[260px] animate-stagger w-full md:w-auto">
               {/* Mobil - Nadpis "O mně" nad info items */}
               <div className="md:hidden flex flex-col gap-2 items-center w-full">
                 <h2 className="about-section-title text-2xl font-bold font-poppins text-center">{about.title}</h2>
@@ -83,8 +83,8 @@ const AboutPage = () => (
         </div>
 
         {/* Section 2 - Co Vám mohu nabídnout */}
-        <div className="w-full flex justify-center items-center py-12 md:py-0 md:h-[70vh]">
-          <div className="w-full px-4 md:px-0 md:w-[82vw] h-auto md:h-[70vh] flex flex-col gap-7 md:gap-17">
+        <div className="w-full flex justify-center items-center py-12 md:py-8 md:h-auto">
+          <div className="w-full px-4 md:px-0 md:w-[82vw] h-auto flex flex-col gap-7 md:gap-10">
             <div className="w-full flex flex-col gap-7 animate-slide-in-up md:gap-7">
               <div className="flex flex-col justify-center items-center gap-3 md:gap-7 title-section">
                 <h2 className="about-section-title text-left text-2xl md:text-4xl font-bold font-poppins">{about.offersTitle}</h2>
@@ -98,7 +98,7 @@ const AboutPage = () => (
         </div>
 
         {/* Section 3 - Technologie */}
-        <div className="w-full h-[80vh] flex justify-center items-center technologies-section">
+        <div className="w-full flex justify-center items-center py-2 md:py-8 h-auto technologies-section">
           <div className="w-[90vw]">
             <Technologies />
           </div>
@@ -106,7 +106,7 @@ const AboutPage = () => (
       </div>
 
       {/* Footer */}
-      <div className="mt-36 md:mt-44">
+      <div className="mt-8 md:mt-12">
         <Footer />
       </div>
   </div>
