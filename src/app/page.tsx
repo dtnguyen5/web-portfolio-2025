@@ -82,7 +82,7 @@ const HomePage = () => (
             </div>
           </div>
 
-          {/* Right Content - Profile Image */}
+          {/* Right Content - profile Image */}
           <div className="flex justify-center lg:items-center lg:pr-12 xl:pr-24 h-full">
             <div className="relative h-home-profile-h w-home-profile-w overflow-hidden border-4 rounded-full home-profile-ring">
               <Image 
