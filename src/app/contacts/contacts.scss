@@ -231,6 +231,8 @@
 .contacts-input:-webkit-autofill,
 .contacts-textarea:-webkit-autofill {
 	-webkit-text-fill-color: #ffffff !important;
+	-webkit-box-shadow: 0 0 0 1000px #1e293b inset !important;
+	box-shadow: 0 0 0 1000px #1e293b inset !important;
 }
 
 .contacts-textarea {
