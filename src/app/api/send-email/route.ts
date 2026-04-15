@@ -6,8 +6,6 @@ import { Redis } from '@upstash/redis'
 import { contactFormSchema } from '@/lib/validations'
 import { NextResponse } from 'next/server'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 // Inicializace rate limiteru
 const ratelimit = new Ratelimit({
   redis: Redis.fromEnv(),
@@ -16,6 +14,9 @@ const ratelimit = new Ratelimit({
 
 export async function POST(request: Request) {
   try {
+    // Inicializace Resend uvnitř funkce
+    const resend = new Resend(process.env.RESEND_API_KEY)
+
     // Získání IP adresy
     const ip =
       request.headers.get('x-forwarded-for') ||
