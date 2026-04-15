@@ -1,13 +1,37 @@
 'use server'
 
 import { Resend } from 'resend'
+import { Ratelimit } from '@upstash/ratelimit'
+import { Redis } from '@upstash/redis'
 import { contactFormSchema } from '@/lib/validations'
 import { NextResponse } from 'next/server'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
+// Inicializace rate limiteru
+const ratelimit = new Ratelimit({
+  redis: Redis.fromEnv(),
+  limiter: Ratelimit.slidingWindow(5, '1 h'), // 5 zpráv za hodinu
+})
+
 export async function POST(request: Request) {
   try {
+    // Získání IP adresy
+    const ip =
+      request.headers.get('x-forwarded-for') ||
+      request.headers.get('x-real-ip') ||
+      'unknown'
+
+    // Kontrola rate limitingu
+    const { success } = await ratelimit.limit(ip)
+
+    if (!success) {
+      return NextResponse.json(
+        { error: 'Příliš mnoho pokusů. Zkuste znovu později.' },
+        { status: 429 }
+      )
+    }
+
     const body = await request.json()
 
     // Validace dat
@@ -24,7 +48,7 @@ export async function POST(request: Request) {
     // Odeslání e-mailu
     const result = await resend.emails.send({
       from: 'noreply@resend.dev', // Nahraďte vaší domenou
-      to: process.env.CONTACT_EMAIL || 'your-email@example.com',
+      to: process.env.CONTACT_EMAIL || '',
       replyTo: validatedData.email,
       subject: `Nová zpráva z kontaktního formuláře od ${validatedData.name}`,
       html: `
