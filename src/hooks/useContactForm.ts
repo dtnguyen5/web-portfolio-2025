@@ -39,7 +39,7 @@ export function useContactForm(onSuccess?: () => void) {
 
       setSubmitStatus({
         type: 'success',
-        message: 'Vaše zpráva byla úspěšně odeslána! Brzy se vám ozveme.',
+        message: 'Vaše zpráva byla úspěšně odeslána!',
       })
 
       form.reset()
