@@ -16,11 +16,11 @@ const Technologies = () => (
 				<span className="technologies-underline" />
 			</div>
 
-			<div className="w-9/12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-15">
+			<div className="w-9/12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-15 animate-stagger">
 				{technologies.items.map((tech) => (
 					<div
 						key={tech.label}
-						className="h-30 w-28 flex flex-col items-center justify-center gap-4 rounded-2xl technologies-card"
+						className="h-30 w-28 flex flex-col items-center justify-center gap-4 rounded-2xl technologies-card animate-slide-in-up"
 					>
 						<div className="flex items-center justify-center h-13 w-13 rounded-full technologies-icon">
 							{tech.reactIconKey === 'framer' ? (

@@ -45,7 +45,7 @@ const AboutPage = () => (
               {about.infoItems.map((item) => (
                 <div key={item.text} className="flex items-center gap-4 md:gap-6 md:ml-0" style={{ marginLeft: "60px" }}>
                   <FontAwesomeIcon icon={ICONS[item.iconKey as keyof typeof ICONS] as IconProp} className="about-info-icon" style={{ width: "38px", height: "38px" }} />
-                  <span className="about-info-text text-base md:text-[1.4rem] font-poppins whitespace-nowrap">{item.text}</span>
+                  <span className="about-info-text text-base md:text-lg font-poppins whitespace-nowrap">{item.text}</span>
                 </div>
               ))}
             </div>
@@ -55,10 +55,10 @@ const AboutPage = () => (
               <h2 className="about-section-title text-4xl font-bold mb-8 font-poppins text-center">{about.title}</h2>
               <div className="about-text-box">
                 <div className="flex flex-col gap-6">
-                  <p className="about-body-text text-[1.2rem] font-poppins leading-normal break-words">
+                  <p className="about-body-text text-lg font-poppins leading-normal break-words">
                     {about.paragraphs[0]}
                   </p>
-                  <p className="about-body-text text-[1.2rem] font-poppins leading-normal break-words">
+                  <p className="about-body-text text-lg font-poppins leading-normal break-words">
                     {about.paragraphs[1]}
                   </p>
                 </div>
