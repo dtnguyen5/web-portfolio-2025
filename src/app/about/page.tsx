@@ -2,10 +2,7 @@ import Header from "@/components/header/Header"
 import Footer from "@/components/footer/Footer"
 import Nabidky from "@/components/nabidky/Nabidky"
 import Technologies from "@/components/technologies/Technologies"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { IconProp } from "@fortawesome/fontawesome-svg-core"
 import Image from "next/image"
-import ICONS from "@/constants/icons"
 import contentData from "@/data/content.json"
 import "./about.scss"
 
@@ -17,73 +14,60 @@ const AboutPage = () => (
       
       {/* Main content */}
       <div className="flex-1">
-        {/* Section 1 - O mně */}
-        <div className="w-full flex flex-col md:h-[80vh] justify-center items-center py-16 md:py-0">
-          <div className="w-full px-4 md:px-0 md:w-[90vw] h-auto md:h-[60vh] flex flex-col md:flex-row items-center md:justify-around gap-6 md:gap-8 animate-stagger">
-
-            {/* Profile */}
-            <div className="flex-shrink-0 flex flex-col items-center justify-center w-full md:w-auto">
-              <div className="w-[200px] h-[200px] md:w-[340px] md:h-[340px] about-profile-box rounded-[40px] border-4 relative overflow-hidden">
-                <Image 
-                  src="/nguyen.jpg" 
-                  alt="Nguyen Duy Tiep" 
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
+        {/* Section 1 - O mně — Card layout */}
+        <section className="about-section">
+          <div className="about-card animate-slide-in-up">
+            {/* Photo side — fills entire left */}
+            <div className="about-card__photo animate-slide-in-left">
+              <Image 
+                src="/nguyen.jpg" 
+                alt="Nguyen Duy Tiep" 
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
 
-            {/* Info items */}
-            <div className="flex flex-col gap-6 md:gap-7 min-w-[260px] animate-stagger w-full md:w-auto">
-              {/* Mobil - Nadpis "O mně" nad info items */}
-              <div className="md:hidden flex flex-col gap-2 items-center w-full">
-                <h2 className="about-section-title text-2xl font-bold font-poppins text-center">{about.title}</h2>
-                <div className="w-[220px] h-[7px] about-section-underline rounded-full"></div>
-              </div>
+            {/* Content side */}
+            <div className="about-card__content animate-slide-in-right animate-stagger">
+              <span className="about-card__tag">Webový designér &amp; vývojář</span>
+              <h2 className="about-card__title">{about.title}</h2>
+              <div className="about-card__line" />
+              <p className="about-card__text">{about.paragraphs[0]}</p>
+              <p className="about-card__text">{about.paragraphs[1]}</p>
 
-              {about.infoItems.map((item) => (
-                <div key={item.text} className="flex items-center gap-4 md:gap-6 md:ml-0" style={{ marginLeft: "60px" }}>
-                  <FontAwesomeIcon icon={ICONS[item.iconKey as keyof typeof ICONS] as IconProp} className="about-info-icon" style={{ width: "38px", height: "38px" }} />
-                  <span className="about-info-text text-base md:text-lg font-poppins whitespace-nowrap">{item.text}</span>
+              <div className="about-card__stats animate-stagger">
+                <div className="about-card__stat">
+                  <strong>18</strong>
+                  <span>Věk</span>
                 </div>
-              ))}
-            </div>
-
-            {/* About text - Desktop only */}
-            <div className="hidden md:flex flex-col justify-center w-[32vw] gap-6" style={{ marginLeft: "60px" }}>
-              <h2 className="about-section-title text-4xl font-bold mb-8 font-poppins text-center">{about.title}</h2>
-              <div className="about-text-box">
-                <div className="flex flex-col gap-6">
-                  <p className="about-body-text text-lg font-poppins leading-normal break-words">
-                    {about.paragraphs[0]}
-                  </p>
-                  <p className="about-body-text text-lg font-poppins leading-normal break-words">
-                    {about.paragraphs[1]}
-                  </p>
+                <div className="about-card__stat-sep" />
+                <div className="about-card__stat">
+                  <strong>2+</strong>
+                  <span>Roky zkušeností</span>
                 </div>
-              </div>
-            </div>
-
-          </div>
-
-          {/* MOBIL - Text dole */}
-          <div className="md:hidden w-full px-4 pb-12">
-            <div className="about-text-box-mobile">
-              <div className="flex flex-col gap-4">
-                <p className="about-body-text text-sm font-poppins leading-relaxed break-words text-left">
-                  {about.paragraphs[0]}
-                </p>
-                <p className="about-body-text text-sm font-poppins leading-relaxed break-words text-left">
-                  {about.paragraphs[1]}
-                </p>
+                <div className="about-card__stat-sep" />
+                <div className="about-card__stat">
+                  <strong>Plzeň</strong>
+                  <span>Bydliště</span>
+                </div>
+                <div className="about-card__stat-sep" />
+                <div className="about-card__stat">
+                  <strong>SŠ INFIS</strong>
+                  <span>Škola</span>
+                </div>
+                <div className="about-card__stat-sep" />
+                <div className="about-card__stat">
+                  <strong>∞</strong>
+                  <span>Chuť se učit</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Section 2 - Co Vám mohu nabídnout */}
-        <div className="w-full flex justify-center items-center py-12 md:py-8 md:h-auto">
+        <div className="w-full flex justify-center items-center py-12 md:py-8 md:h-auto about-offers-section">
           <div className="w-full px-4 md:px-0 md:w-[82vw] h-auto flex flex-col gap-7 md:gap-10">
             <div className="w-full flex flex-col gap-7 animate-slide-in-up md:gap-7">
               <div className="flex flex-col justify-center items-center gap-3 md:gap-7 title-section">
@@ -92,7 +76,9 @@ const AboutPage = () => (
               </div>
             </div>
             <div>
-              <Nabidky />
+              <div className="about-offers-cards">
+                <Nabidky />
+              </div>
             </div>
           </div>
         </div>
