@@ -41,7 +41,7 @@
 
   @media (max-width: 640px) {
     > .flex-1 > div:nth-child(2) {
-      padding-top: 80px !important;
+      padding-top: 50px !important;
     }
   }
 }
@@ -55,6 +55,7 @@
 
 .technologies-section {
   margin-top: 20px;
+  @media (max-width: 640px) { margin-top: 60px !important; }
   @media (min-width: 768px) { margin-top: 80px; }
 }
 
@@ -68,10 +69,14 @@
   @media (max-width: 900px) {
     margin-top: 56px;
   }
+
+  @media (max-width: 640px) {
+    margin-top: 0;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
 }
 
-.about-offers-cards {
-}
 
 // ═══════════════════════════════════════════════════════════════
 //  "O mně" — Glass card with photo filling left side
@@ -85,7 +90,7 @@
 
   @media (min-width: 1024px) { padding-left: 3rem; padding-right: 3rem; }
   @media (min-width: 1280px) { padding-left: 5rem; padding-right: 5rem; }
-  @media (max-width: 767px)  { padding: 3.75rem 1rem 1.25rem; }
+  @media (max-width: 767px)  { padding: 3.75rem 1rem 0.75rem; }
   @media (max-width: 1024px) { padding-top: 4rem; }
 }
 
