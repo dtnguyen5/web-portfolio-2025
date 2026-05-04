@@ -137,6 +137,274 @@ $icon-colors: (
 	font-family: $poppins;
 }
 
+@media (min-width: 940px) and (max-width: 1000px) {
+	.technologies-panel {
+		height: auto !important;
+		padding: 32px 24px !important;
+		gap: 48px !important;
+	}
+
+	.technologies-panel > div:last-child {
+		width: 100% !important;
+		grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+		gap: 24px !important;
+	}
+
+	.technologies-card {
+		width: 100% !important;
+		height: 120px !important;
+		padding: 18px 10px !important;
+		gap: 10px !important;
+	}
+
+	.technologies-icon {
+		width: 56px !important;
+		height: 56px !important;
+	}
+}
+
+@media (min-width: 1001px) and (max-width: 1040px) {
+	.technologies-panel {
+		height: auto !important;
+		padding: 32px 28px !important;
+		gap: 48px !important;
+	}
+
+	.technologies-panel > div:last-child {
+		width: 100% !important;
+		grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+		gap: 24px !important;
+	}
+
+	.technologies-card {
+		width: 100% !important;
+		height: 120px !important;
+		padding: 18px 10px !important;
+		gap: 10px !important;
+	}
+
+	.technologies-icon {
+		width: 56px !important;
+		height: 56px !important;
+	}
+}
+
+@media (min-width: 1041px) and (max-width: 1099px) {
+	.technologies-panel {
+		height: auto !important;
+		padding: 36px 32px !important;
+		gap: 56px !important;
+	}
+
+	.technologies-panel > div:last-child {
+		width: 100% !important;
+		grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+		gap: 36px !important;
+		justify-items: center;
+	}
+}
+
+@media (min-width: 1080px) and (max-width: 1200px) {
+	.technologies-panel {
+		padding: 36px 32px !important;
+		gap: 56px !important;
+	}
+
+	.technologies-panel > div:last-child {
+		width: 100% !important;
+		grid-template-columns: repeat(6, 96px) !important;
+		gap: 56px !important;
+		justify-items: center;
+		justify-content: center;
+	}
+
+	.technologies-card {
+		width: 100% !important;
+	}
+}
+
+@media (min-width: 810px) and (max-width: 860px) {
+	.technologies-panel {
+		height: auto !important;
+		padding: 28px 20px !important;
+		gap: 40px !important;
+	}
+
+	.technologies-panel > div:last-child {
+		width: 100% !important;
+		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+		gap: 20px !important;
+	}
+
+	.technologies-card {
+		width: 100% !important;
+		height: 112px !important;
+		padding: 16px 10px !important;
+		gap: 10px !important;
+	}
+
+	.technologies-icon {
+		width: 52px !important;
+		height: 52px !important;
+	}
+}
+
+@media (min-width: 900px) and (max-width: 939px) {
+	.technologies-panel {
+		height: auto !important;
+		padding: 30px 24px !important;
+		gap: 44px !important;
+	}
+
+	.technologies-panel > div:last-child {
+		width: 100% !important;
+		grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+		gap: 22px !important;
+	}
+
+	.technologies-card {
+		width: 100% !important;
+		height: 116px !important;
+		padding: 16px 10px !important;
+		gap: 10px !important;
+	}
+
+	.technologies-icon {
+		width: 54px !important;
+		height: 54px !important;
+	}
+}
+
+@media (min-width: 870px) and (max-width: 899px) {
+	.technologies-panel {
+		height: auto !important;
+		padding: 30px 22px !important;
+		gap: 42px !important;
+	}
+
+	.technologies-panel > div:last-child {
+		width: 100% !important;
+		grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+		gap: 22px !important;
+	}
+
+	.technologies-card {
+		width: 100% !important;
+		height: 114px !important;
+		padding: 16px 10px !important;
+		gap: 10px !important;
+	}
+
+	.technologies-icon {
+		width: 54px !important;
+		height: 54px !important;
+	}
+}
+
+@media (min-width: 780px) and (max-width: 809px) {
+	.technologies-panel {
+		height: auto !important;
+		padding: 28px 20px !important;
+		gap: 38px !important;
+	}
+
+	.technologies-panel > div:last-child {
+		width: 100% !important;
+		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+		gap: 18px !important;
+	}
+
+	.technologies-card {
+		width: 100% !important;
+		height: 110px !important;
+		padding: 16px 10px !important;
+		gap: 10px !important;
+	}
+
+	.technologies-icon {
+		width: 52px !important;
+		height: 52px !important;
+	}
+}
+
+@media (min-width: 641px) and (max-width: 699px) {
+	.technologies-panel {
+		height: auto !important;
+		padding: 26px 16px !important;
+		gap: 32px !important;
+	}
+
+	.technologies-panel > div:last-child {
+		width: 100% !important;
+		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+		gap: 16px !important;
+	}
+
+	.technologies-card {
+		width: 100% !important;
+		height: 104px !important;
+		padding: 14px 8px !important;
+		gap: 8px !important;
+	}
+
+	.technologies-icon {
+		width: 48px !important;
+		height: 48px !important;
+	}
+}
+
+@media (min-width: 740px) and (max-width: 779px) {
+	.technologies-panel {
+		height: auto !important;
+		padding: 28px 20px !important;
+		gap: 36px !important;
+	}
+
+	.technologies-panel > div:last-child {
+		width: 100% !important;
+		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+		gap: 18px !important;
+	}
+
+	.technologies-card {
+		width: 100% !important;
+		height: 108px !important;
+		padding: 16px 10px !important;
+		gap: 8px !important;
+	}
+
+	.technologies-icon {
+		width: 50px !important;
+		height: 50px !important;
+	}
+}
+
+@media (min-width: 700px) and (max-width: 739px) {
+	.technologies-panel {
+		height: auto !important;
+		padding: 26px 18px !important;
+		gap: 34px !important;
+	}
+
+	.technologies-panel > div:last-child {
+		width: 100% !important;
+		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+		gap: 16px !important;
+	}
+
+	.technologies-card {
+		width: 100% !important;
+		height: 106px !important;
+		padding: 15px 9px !important;
+		gap: 8px !important;
+	}
+
+	.technologies-icon {
+		width: 50px !important;
+		height: 50px !important;
+	}
+}
+
 /* Mobile responsive - 3 sloupce a lepší spacing */
 @media (max-width: 640px) {
 	.technologies-panel {
