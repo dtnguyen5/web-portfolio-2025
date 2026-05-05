@@ -20,8 +20,8 @@ const AboutPage = () => (
             {/* Photo side — fills entire left */}
             <div className="about-card__photo animate-slide-in-left">
               <Image 
-                src="/nguyen.jpg" 
-                alt="Nguyen Duy Tiep" 
+                src={about.photo.src}
+                alt={about.photo.alt}
                 fill
                 className="object-cover"
                 priority
@@ -30,37 +30,24 @@ const AboutPage = () => (
 
             {/* Content side */}
             <div className="about-card__content animate-slide-in-right animate-stagger">
-              <span className="about-card__tag">Webový designér &amp; vývojář</span>
+              <span className="about-card__tag">{about.tag}</span>
               <h2 className="about-card__title">{about.title}</h2>
               <div className="about-card__line" />
               <p className="about-card__text">{about.paragraphs[0]}</p>
               <p className="about-card__text">{about.paragraphs[1]}</p>
 
               <div className="about-card__stats animate-stagger">
-                <div className="about-card__stat">
-                  <strong>18</strong>
-                  <span>Věk</span>
-                </div>
-                <div className="about-card__stat-sep" />
-                <div className="about-card__stat">
-                  <strong>2+</strong>
-                  <span>Roky zkušeností</span>
-                </div>
-                <div className="about-card__stat-sep" />
-                <div className="about-card__stat">
-                  <strong>Plzeň</strong>
-                  <span>Bydliště</span>
-                </div>
-                <div className="about-card__stat-sep" />
-                <div className="about-card__stat">
-                  <strong>SŠ INFIS</strong>
-                  <span>Škola</span>
-                </div>
-                <div className="about-card__stat-sep" />
-                <div className="about-card__stat">
-                  <strong>∞</strong>
-                  <span>Chuť se učit</span>
-                </div>
+                {about.stats.map((stat, index) => (
+                  <div key={`${stat.value}-${stat.label}`} className="contents">
+                    <div className="about-card__stat">
+                      <strong>{stat.value}</strong>
+                      <span>{stat.label}</span>
+                    </div>
+                    {index < about.stats.length - 1 && (
+                      <div className="about-card__stat-sep" />
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           </div>

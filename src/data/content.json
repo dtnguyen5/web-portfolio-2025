@@ -111,28 +111,37 @@
     ]
   },
   "about": {
-    "infoItems": [
-      {
-        "iconKey": "user",
-        "text": "Nguyen Duy Tiep"
-      },
-      {
-        "iconKey": "birthdayCake",
-        "text": "19 let"
-      },
-      {
-        "iconKey": "mapMarkerAlt",
-        "text": "Plzeň"
-      },
-      {
-        "iconKey": "graduationCap",
-        "text": "SŠ INFIS"
-      }
-    ],
+    "tag": "Webový designér & vývojář",
+    "photo": {
+      "src": "/nguyen.jpg",
+      "alt": "Nguyen Duy Tiep"
+    },
     "title": "O mně",
     "paragraphs": [
       "Jsem webový designér a vývojář z Plzně. Zaměřuji se na tvorbu moderních a uživatelsky přívětivých webů, které pomáhají přetavit vaše vize v úspěšný projekt. Práce na webech mě baví především proto, že v nich mohu propojit svou kreativitu s technickým řešením, které dává smysl.",
       "Zakládám si na funkčnosti, přehlednosti a vizuální čistotě. Důraz kladu na vysokou technickou kvalitu a neustále sleduji nové trendy, abych vám nabídl řešení, které spolehlivě plní svůj účel a bude vám dlouhodobě dobře sloužit."
+    ],
+    "stats": [
+      {
+        "value": "19",
+        "label": "Věk"
+      },
+      {
+        "value": "2+",
+        "label": "Roky zkušeností"
+      },
+      {
+        "value": "Plzeň",
+        "label": "Bydliště"
+      },
+      {
+        "value": "SŠ INFIS",
+        "label": "Škola"
+      },
+      {
+        "value": "∞",
+        "label": "Chuť se učit"
+      }
     ],
     "offersTitle": "Co Vám mohu nabídnout ?"
   },
