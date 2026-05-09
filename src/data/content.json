@@ -118,8 +118,8 @@
     },
     "title": "O mně",
     "paragraphs": [
-      "Jsem webový designér a vývojář z Plzně. Zaměřuji se na tvorbu moderních a uživatelsky přívětivých webů, které pomáhají přetavit vaše vize v úspěšný projekt. Práce na webech mě baví především proto, že v nich mohu propojit svou kreativitu s technickým řešením, které dává smysl.",
-      "Zakládám si na funkčnosti, přehlednosti a vizuální čistotě. Důraz kladu na vysokou technickou kvalitu a neustále sleduji nové trendy, abych vám nabídl řešení, které spolehlivě plní svůj účel a bude vám dlouhodobě dobře sloužit."
+      "Jsem webový designér a vývojář z Plzně. Zaměřuji se na tvorbu moderních a uživatelsky přívětivých webů, které pomáhají přetavit Vaše vize v úspěšný projekt. Práce na webech mě baví především proto, že v nich mohu propojit svou kreativitu s technickým řešením, které dává smysl.",
+      "Zakládám si na funkčnosti, přehlednosti a vizuální čistotě. Důraz kladu na vysokou technickou kvalitu a neustále sleduji nové trendy, abych Vám nabídl řešení, které spolehlivě plní svůj účel a bude Vám dlouhodobě dobře sloužit."
     ],
     "stats": [
       {
@@ -150,17 +150,17 @@
       {
         "title": "Návrh webu",
         "iconKey": "desktop",
-        "text": "Soustředím se na přípravu pevných základů. Tvořím přehledné wireframy a propracovaný vizuální design, díky kterému si ujasníme strukturu, rozvržení prvků a celkový vzhled vašeho webu ještě předtím, než začne jeho samotná realizace."
+        "text": "Soustředím se na přípravu pevných základů. Tvořím přehledné wireframy a propracovaný vizuální design, díky kterému si ujasníme strukturu, rozvržení prvků a celkový vzhled Vašeho webu ještě předtím, než začne jeho samotná realizace."
       },
       {
         "title": "Tvorba webu",
         "iconKey": "code",
-        "text": "Na základě schváleného návrhu pro vás vytvořím kompletní web na míru. Zajišťuji, aby výsledek působil moderně, byl plně responzivní a intuitivně vedl návštěvníky k cíli, čímž spolehlivě podpořím vaši prezentaci."
+        "text": "Na základě schváleného návrhu pro Vás vytvořím kompletní web na míru. Zajišťuji, aby výsledek působil moderně, byl plně responzivní a intuitivně vedl návštěvníky k cíli, čímž spolehlivě podpořím Vaši prezentaci."
       },
       {
         "title": "Optimalizace webu",
         "iconKey": "gear",
-        "text": "Zaměřuji se na rychlost a přehlednost vašeho webu. Ladím vnitřní nastavení tak, aby vše fungovalo hladce a intuitivně. Výsledkem je web, který je bleskový, snadno se spravuje a návštěvníci se v něm okamžitě zorientují."
+        "text": "Zaměřuji se na rychlost a přehlednost Vašeho webu. Ladím vnitřní nastavení tak, aby vše fungovalo hladce a intuitivně. Výsledkem je web, který je bleskový, snadno se spravuje a návštěvníci se v něm okamžitě zorientují."
       }
     ]
   },

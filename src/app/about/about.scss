@@ -60,6 +60,18 @@
   @media (min-width: 768px) { margin-top: 80px; }
 }
 
+@media (max-width: 640px) {
+  .technologies-section {
+    margin-top: 64px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .technologies-section .technologies-root {
+    margin-top: 0 !important;
+  }
+}
+
 .about-offers-section {
   margin-top: 72px;
 
